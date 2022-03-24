@@ -1,0 +1,5 @@
+.sidebar_block {
+  flex: 1 0 200px;
+  max-width: 350px;
+  margin-left: 1%;
+}

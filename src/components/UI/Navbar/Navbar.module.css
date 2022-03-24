@@ -6,6 +6,7 @@
 
   font-size: 20px;
   overflow-y: scroll;
+  user-select: none;
 }
 
 .logo {
@@ -41,9 +42,9 @@
 
 .main_nav li span {
   display: inline-block;
-  padding: 15px 20px;
+  padding: 12px 20px;
   border-radius: var(--max-border-radius);
-  transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out 0.03s;
 }
 
 .logo:hover {
