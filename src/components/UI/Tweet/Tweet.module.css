@@ -1,0 +1,150 @@
+.tweet_block {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  
+  padding: 12px 15px 0;
+
+  font-size: 15px;
+  border-bottom: var(--border-default);
+}
+
+.avatar {
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: var(--max-border-radius);
+}
+
+.avatar, 
+.avatar img {
+  width: 48px;
+  height: 48px;
+}
+
+.avatar img {
+  object-fit: cover;
+}
+
+.tweet_sect_1 {
+  margin: 0 12px 0 0;
+}
+
+.tweet_sect_2 {
+  padding: 0 0 12px 0;
+}
+
+.post {
+  margin: 2px 0 0;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 12px;
+
+  max-width: 425px;
+}
+
+/* buttons */
+.buttons .btn,
+.btn_opt {
+  height: 35px;
+  width: 35px;
+
+  padding: 0;
+  margin: 0;
+
+  font-size: 19px;
+  line-height: 0!important;
+  color: var(--text-primary-gray_2);
+
+  background-color: transparent;
+  border: none;
+  border-radius: var(--max-border-radius);
+
+  transition: var(--transition-default);
+}
+
+.btn_opt {
+  position: relative;
+  width: 30px;
+  height: 15px;
+  z-index: 1;
+}
+
+.btn_opt svg {
+  width: 18px;
+}
+
+.btn_opt::after {
+  position: absolute;
+  content: '';
+
+  display: block;
+  width: 30px;
+  height: 30px;
+  top: -6px;
+  opacity: 0;
+  
+  border-radius: var(--max-border-radius);
+  background-color: var(--hover-blue);
+  transition: var(--transition-default);
+  z-index: -1;
+}
+
+/* hovers */
+.buttons .btn:hover {
+  color: var(--text-primary-blue);
+  background-color: var(--hover-blue);
+}
+
+.btn_opt:hover::after {
+  opacity: 1;
+}
+
+.buttons .btn_rt:hover {
+  color: #00BA7C;
+  background-color: #E1F1EB;
+}
+
+.buttons .btn_like:hover {
+  color: #FA1880;
+  background-color: #F7E2EB;
+}
+/* hovers end */
+
+.buttons .btn_share,
+.buttons .btn_reply {
+  font-size: 17px;
+}
+/* buttons end */
+
+
+.name a {
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--text-primary-black);
+}
+
+.name a:hover {
+  text-decoration: underline;
+}
+
+.username a, 
+.datetime {
+  text-decoration: none;
+  color: var(--text-primary-gray);
+}
+
+.name,
+.username {
+  margin-right: 10px;
+}
+
+.tweet_priminfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
