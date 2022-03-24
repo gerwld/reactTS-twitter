@@ -1,6 +1,7 @@
 :root {
 --max-border-radius: 55555px;
 --main-text-color: #000;
+--border-default: 1px solid rgb(238, 238, 238);
 }
 
 body {
@@ -56,12 +57,24 @@ code {
 
 /* Home styles */
 .home_content {
+  display: flex;
+
   height: 100vh;
+  max-width: 100vw;
   min-width: 320px;
   min-height: 480px;
   overflow: hidden;
 }
 
-
-
 /* Home styles end */
+
+/* Feed */
+
+.feed_block {
+  flex: 0 2 600px;
+  max-width: 600px;
+  border-left: var(--border-default);
+  border-right: var(--border-default);
+}
+
+/* Feed end */

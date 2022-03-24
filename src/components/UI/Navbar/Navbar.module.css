@@ -1,8 +1,10 @@
 .navbar {
-  font-size: 20px;
-  width: 100%;
+  flex: 1 0 30%;
+  max-width: 270px;
   height: 100vh;
   min-height: 300px;
+
+  font-size: 20px;
   overflow-y: scroll;
 }
 
