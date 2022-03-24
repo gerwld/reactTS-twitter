@@ -1,12 +1,9 @@
 import React, { FC, useEffect } from "react";
 import s from "./ModalWindow.module.css";
-import PropTypes from "prop-types";
 
 export const ModalWindow: FC<Props> = ({ children, setVisible, title }) => {
-
   useEffect(() => {
     document.querySelector("body")?.classList.add("no-scroll");
-
     return () => {
       document.querySelector("body")?.classList.remove("no-scroll");
     };
@@ -26,5 +23,5 @@ export const ModalWindow: FC<Props> = ({ children, setVisible, title }) => {
 interface Props {
   children: React.ReactNode;
   setVisible(arg0: boolean): any;
-  title: string
+  title: string;
 }

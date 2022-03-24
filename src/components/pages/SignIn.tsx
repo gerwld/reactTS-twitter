@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import { ModalWindow } from "../common/ModalWindow/ModalWindow";
-import { Form, Field } from "react-final-form";
-import SimpleForm from '../common/SimpleForm';
+import React, { useState, FC } from "react";
+import { ModalWindow } from "../../common/ModalWindow/ModalWindow";
+import { Field } from "react-final-form";
+import SimpleForm from '../../common/SimpleForm';
 
-const SignIn = () => {
+const SignIn: React.FC  = ():React.ReactElement => {
   const [showSignModal, changeSignModal] = useState(false);
   const [showSignUpModal, changeSignUpModal] = useState(false);
 
@@ -13,7 +13,7 @@ const SignIn = () => {
   const onChangeSignUpModal = () => {
     changeSignUpModal(true);
   };
-
+  
   return (
     <div className="sign-in">
       <div className="sign-in__block sign-in__block-1">
@@ -44,7 +44,7 @@ const SignIn = () => {
       </div>
       {showSignModal && (
         <ModalWindow setVisible={changeSignModal} title="Sign Up">
-          <SignUpForm />
+          <SignUpForm setVisible={changeSignModal}/>
         </ModalWindow>
       )}
 
@@ -62,31 +62,40 @@ const SignInForm = () => {
     <SimpleForm onSend={(e) => console.log(e)}>
       <div>
         <label>Login</label>
-        <Field name="login" component="input" placeholder="Login" />
+        <Field name="login" component="input" placeholder="Login" autoComplete="off" required />
       </div>
       <div>
         <label>Password</label>
-        <Field name="password" component="input" placeholder="Password" />
+        <Field name="password" component="input" type="password" placeholder="Password" autoComplete="off" required />
       </div>
       <button type="submit">Log In</button>
     </SimpleForm>
   );
 };
 
-const SignUpForm = () => {
+const SignUpForm: FC<SignUpFormProps> = ({setVisible}) => {
   return (
     <SimpleForm onSend={(e) => console.log(e)}>
+       <div>
+        <label>Name</label>
+        <Field name="name" component="input" placeholder="Name" required />
+      </div>
       <div>
         <label>Login</label>
-        <Field name="login" component="input" placeholder="Login" />
+        <Field name="login" component="input" placeholder="Login" required/>
       </div>
       <div>
         <label>Password</label>
-        <Field name="password" component="input" placeholder="Password" />
+        <Field name="password" component="input" type="password" placeholder="Password" autoComplete="off" required />
       </div>
+      <button onClick={() => setVisible(false)} type="button">Cancel</button>
       <button type="submit">Log In</button>
     </SimpleForm>
   );
 };
+
+interface SignUpFormProps {
+  setVisible: Function
+}
 
 export default SignIn;

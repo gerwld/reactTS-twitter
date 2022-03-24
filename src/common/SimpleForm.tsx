@@ -1,6 +1,5 @@
 import React, {FC} from "react";
 import { Form } from "react-final-form";
-import PropTypes from 'prop-types';
 
 const SimpleForm: FC<SimFormProps> = ({children, onSend, validate}) => {
   const onSubmit = (data: any, form: any) => {
@@ -10,7 +9,6 @@ const SimpleForm: FC<SimFormProps> = ({children, onSend, validate}) => {
   return (
     <Form
       onSubmit={onSubmit}
-      validate={validate}
       render={({ handleSubmit }) => (
         <form onSubmit={handleSubmit}>
          {children}
