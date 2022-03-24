@@ -17,3 +17,8 @@
   font-size: 15px;
   line-height: 15px;
 }
+
+.search_block input:focus {
+  background-color: transparent;
+  outline: var(--main-blue) solid 1px;
+}
