@@ -10,7 +10,7 @@ const Navbar = () => {
       </NavLink>
       <nav className={s.main_nav}>
         <ul>
-          <li><NavLink to="/home"><span>Home</span></NavLink></li>
+          <li><NavLink to="/home" className={({isActive}) => isActive ? s.active : '' }><span>Home</span></NavLink></li>
           <li><NavLink to="/explore"><span>Explore</span></NavLink></li>
           <li><NavLink to="/notifications"><span>Notifications</span></NavLink></li>
           <li><NavLink to="/messages"><span>Messages</span></NavLink></li>
