@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
+import { ModalWindow } from '../common/ModalWindow/ModalWindow';
 
 const SignIn = () => {
+  const [showSignModal, changeSignModal] = useState(false);
+  const onChangeSignModal = () => {
+    changeSignModal(true);
+  }
   return (
     <div className="sign-in">
       <div className="sign-in__block sign-in__block-1">
@@ -21,12 +26,14 @@ const SignIn = () => {
           <p className="subheader">Join twitter today.</p>
           <div className="buttons">
             <button className="btn btn-login">Sign Up</button>
-            <button className="btn btn-login">Log In</button>
+            <button onClick={onChangeSignModal} className="btn btn-login">Log In</button>
           </div>
         </div>
       </div>
+      {showSignModal ? <ModalWindow setVisible={changeSignModal}>Form</ModalWindow> : ''}
     </div>
   );
 };
+
 
 export default SignIn;
