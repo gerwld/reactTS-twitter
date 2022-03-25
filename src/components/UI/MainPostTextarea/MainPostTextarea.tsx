@@ -4,6 +4,9 @@ import { Field } from "react-final-form";
 import SimpleForm from "../../../common/SimpleForm";
 import TextareaAutosize from "react-textarea-autosize";
 import { CircularProgress } from "@mui/material";
+import {IoImageOutline} from "react-icons/io5"
+import {AiOutlineSmile} from "react-icons/ai"
+
 
 const MainPostTextarea = () => {
   const maxSymbols = 300;
@@ -11,6 +14,7 @@ const MainPostTextarea = () => {
   const [left, setLeft] = useState(maxSymbols);
   const onTextareaSend = (data: object) => {
     console.log(data);
+    setLength(0);
   };
 
   const getColor = (length: number) => {
@@ -51,23 +55,24 @@ const MainPostTextarea = () => {
           <div className={s.form_buttons}>
             <div className={s.btn_group}>
               <button type="button" className={`${s.btn} ${s.btn_media}`}>
-                Media
+              <IoImageOutline />
               </button>
               <button type="button" className={`${s.btn} ${s.btn_emoji}`}>
-                Emoji
+                <AiOutlineSmile />
               </button>
             </div>
-            <div className="progressBar">
-              <span className={left < 0 ? 'warning' : ''}>{left}</span>
+            <div className={s.progressBar}>
+              <span className={left < 0 ? s.warning : ''}>{left}</span>
               <CircularProgress
                 size={22}
                 color={getColor(length)}
                 thickness={4.5}
+                className={s.circle}
                 variant="determinate"
                 value={length <= 300 ? Math.ceil(length / 3) : 100}
               />
             </div>
-            <button type="submit" disabled={length > maxSymbols || length < 1}>Tweet</button>
+            <button className={s.btn_send + ' button_ct'} type="submit" disabled={length > maxSymbols || length < 1}>Tweet</button>
           </div>
         </SimpleForm>
       </div>

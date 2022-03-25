@@ -3,6 +3,11 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
+
+  padding: 10px 20px;
+
+  border-bottom: var(--border-default);
+  box-sizing: border-box;
 }
 
 .user_avatar img {
@@ -32,6 +37,11 @@
   font-size: 17px;
   font-family: inherit;
   box-sizing: border-box;
+  border: none;
+}
+
+.textarea_block textarea:focus {
+  outline: none;
 }
 
 
@@ -44,9 +54,74 @@
 .form_buttons {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
+
+  margin-left: 10px;
+  padding: 12px 0 0;
+  border-top: var(--border-default);
 }
 
 .btn_group {
   flex: 1;
+}
+
+.btn_group button {
+  margin: 0;
+  padding: 6px;
+
+  font-size: 22px;
+  line-height: 0!important;
+
+  color: var(--text-primary-blue);
+  background-color: transparent;
+  border: none;
+  border-radius: var(--max-border-radius);
+  transition: var(--transition-middle);
+}
+
+.btn_group button:not(:last-child) {
+  margin-right: 10px;
+}
+
+.btn_group button:hover {
+  background-color: var(--hover-blue);
+}
+
+.progressBar {
+  display: flex;
+  align-items: center;
+  user-select: none;
+}
+
+.progressBar .circle {
+  margin: 0 10px;
+}
+
+.progressBar span {
+  font-size: 14px;
+  color:rgb(129, 129, 129);
+}
+
+.progressBar .warning {
+  color: red;
+}
+
+.btn_send {
+  padding: 9px 16px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+  background-color: var(--text-primary-blue);
+  border: none;
+  border-radius: var(--max-border-radius);
+}
+
+.btn_send:disabled {
+background-color: #68b9f0;
+pointer-events: none;
+}
+
+.btn_send:hover {
+  background-color: var(--text-primary-darkblue);
+
 }
