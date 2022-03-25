@@ -1,8 +1,13 @@
 .navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+
   flex: 1 0 30%;
-  max-width: 270px;
+  max-width: 260px;
   height: 100vh;
-  min-height: 300px;
+  min-height: 0%;
 
   font-size: 20px;
   overflow-y: scroll;
@@ -35,6 +40,13 @@
   margin-bottom: 8px;
 }
 
+.main_nav li svg {
+  position: absolute;
+  left: 15px;
+  bottom: calc(50% - 12px);
+  width: 26px;
+}
+
 .main_nav li a {
   display: block;
   width: 100%;
@@ -43,8 +55,10 @@
 }
 
 .main_nav li span {
+  position: relative;
   display: inline-block;
-  padding: 12px 20px;
+  padding: 12px 25px;
+  padding-left: 55px;
   border-radius: var(--max-border-radius);
   transition: 0.1s ease-in-out 0.03s;
 }
@@ -59,4 +73,25 @@
 
 .main_nav li:hover span {
   background-color: rgb(233, 233, 233);
+}
+
+.btn_tweet {
+  width: 85%;
+  padding: 16px;
+  margin-top: 2vh;
+
+  font-size: 17px;
+  font-weight: bold;
+  color: #fff;
+
+  background-color: var(--text-primary-blue);
+  border-radius: var(--max-border-radius);
+  border: none;
+  box-sizing: border-box;
+  transition: var(--transition-middle);
+}
+
+.btn_tweet:hover {
+  background-color: var(--text-primary-darkblue);
+
 }
