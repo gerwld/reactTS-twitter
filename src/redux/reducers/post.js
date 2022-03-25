@@ -4,7 +4,6 @@ import { ON_POST_TYPE } from '../actions/post';
 const initialState = {
   currentPostText: "wgwedfvdfbdfbdfbdfb",
   maxLength: 300,
-  currLength: 0
 }
 
 const postReducer = (state = initialState, action) => {
@@ -13,7 +12,6 @@ const postReducer = (state = initialState, action) => {
       return {
         ...state,
         currentPostText: action.payload,
-        currLength: action.payload.length,
       }
     default:
       return state;

@@ -22,7 +22,6 @@ const Feed = () => {
     <div className="feed_block">
       <Header>Home</Header>
       <MainPostTextarea/>
-      <MainPostTextarea/>
       <Tweet />
       <Tweet />
       <Tweet />

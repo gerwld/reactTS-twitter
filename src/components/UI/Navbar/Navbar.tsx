@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import s from "./Navbar.module.css";
+import CreatePostPopup from '../CreatePostPopup/CreatePostPopup';
 
 const Navbar = () => {
+  const [isPopupShow, setPopup] = useState(false);
+
+  const onTweetPopup = () => {
+    setPopup(true);
+  }
   return (
+    <div className="navbar_wrapper">
     <div className={s.navbar}>
       <div className={s.navbar_sect}>
         <NavLink to="/">
@@ -114,10 +121,12 @@ const Navbar = () => {
               </NavLink>
             </li>
           </ul>
-          <button className={s.btn_tweet}>Tweet</button>
+          <button onClick={onTweetPopup} className={s.btn_tweet}>Tweet</button>
         </nav>
       </div>
       <div>profile info</div>
+    </div>
+      {isPopupShow && <CreatePostPopup setCreatePost={setPopup}/>}
     </div>
   );
 };
