@@ -1,0 +1,43 @@
+.textarea_block {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.user_avatar img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: var(--max-border-radius);
+}
+
+.form {
+  flex: 1 0 300px;
+  margin: 0;
+}
+
+.textarea_block textarea {
+  width: 100%;
+  min-width: 100%;
+  max-width: 550px;
+
+  height: 70px;
+  min-height: 70px;
+  max-height: 600px;
+  padding: 10px 10px 10px;
+
+  resize: none!important;
+
+  font-size: 17px;
+  font-family: inherit;
+  box-sizing: border-box;
+  /* transition: var(--transition-fast); */
+}
+
+
+.textarea_block textarea::placeholder {
+  font-size: 17px;
+  font-weight: 500;
+  font-family: inherit;
+}
