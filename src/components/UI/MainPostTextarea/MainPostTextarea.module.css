@@ -46,3 +46,7 @@
   justify-content: space-between;
   align-items: flex-end;
 }
+
+.btn_group {
+  flex: 1;
+}

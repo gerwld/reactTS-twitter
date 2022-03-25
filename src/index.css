@@ -116,6 +116,8 @@ button {
 
 /* Feed end */
 
+/* MainPost Textarea */
+
 .MuiCircularProgress-colorPrimary {
   color: var(--text-primary-blue);
 }
@@ -146,3 +148,17 @@ button {
 .MuiCircularProgress-svg {
 stroke-linecap: round;
 }
+
+.MuiCircularProgress-colorWarning .MuiCircularProgress-circle {
+  color: rgb(247, 204, 14)!important;
+}
+
+.MuiCircularProgress-colorSecondary .MuiCircularProgress-circle {
+  color: red!important;
+}
+
+.warning {
+  color: red;
+}
+
+/* MainPost Textarea end */
