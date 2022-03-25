@@ -10,9 +10,11 @@
 
 --main-blue: rgb(49, 185, 209);
 --main-gray-color: #eff3f4;
+--main-lightgray-color: #f7f8f9;
 --border-default: 1px solid rgb(238, 238, 238);
 
 --hover-blue: #E2EEF6;
+--hover-darker: rgba(0, 0, 0, 0.03);
 
 --transition-default: 0.2s ease-in-out 0.02s;
 --transition-middle: 0.15s ease;

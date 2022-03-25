@@ -9,3 +9,121 @@
   width: 350px;
   top: 0;
 }
+
+/* Trends block */
+
+.sb_block {
+  padding: 15px 0;
+  border-radius: 15px;
+  background-color: var(--main-lightgray-color);
+}
+
+.sb_block:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.sb_block h3 {
+  font-size: 20px;
+  font-weight: 800;
+  margin: 0 0 15px 0;
+  padding: 0 20px;
+}
+
+.trend_block {
+  padding: 10px 20px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.trend_block span {
+  font-size: 14px;
+  display: block;
+}
+
+.trend_block .name {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #000;
+}
+
+.trend_block .amount {
+  color: var(--text-primary-gray_2);
+}
+
+/* Trends block end */
+
+
+
+/* Follow block */
+
+.follow_block {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  padding: 10px 20px;
+  cursor: pointer;
+  border-bottom: 1px solid #ececec;
+}
+
+.follow_block .avatar img {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: var(--max-border-radius);
+}
+
+.follow_info {
+  flex: 1;
+  padding: 0 10px;
+}
+
+.follow_info span {
+  display: block;
+}
+
+.follow_info .name {
+  margin-bottom: 3px;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: bold;
+  color: #000;
+}
+
+.follow_info .username {
+  font-weight: 500;
+  font-size: 14.5px;
+  color: var(--text-primary-gray_2);
+}
+
+.follow_block button {
+  padding: 8px 15px;
+
+  font-size: 14.5px;
+  font-weight: 800;
+  color: #fff;
+
+  border: none;
+  background-color: #343434;
+  border-radius: var(--max-border-radius);
+  transition: background var(--transition-middle);
+}
+
+.follow_block button:hover {
+  background-color: #4e4e4e;
+}
+
+.follow_block button:active {
+  transform: translateY(1px);
+}
+
+/* Follow block end*/
+
+.follow_block,
+.trend_block {
+transition: var(--transition-middle);
+}
+
+.trend_block:hover,
+.follow_block:hover  {
+  background-color: var(--hover-darker);
+}
