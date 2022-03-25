@@ -17,17 +17,24 @@
 }
 
 .logo {
-  width: 50px;
-  height: 50px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
+
+  margin-top: 5px;
+  width: 50px;
+  height: 50px;
   border-radius: var(--max-border-radius);
+  transition: var(--transition-default);
 }
 
 .logo img {
   width: 30px;
   height: auto;
+}
+
+.main_nav {
+  margin-top: 10px;
 }
 
 .main_nav ul {
@@ -37,13 +44,12 @@
 }
 
 .main_nav li:not(:last-child) {
-  margin-bottom: 8px;
+  margin-bottom: 1.2vh;
 }
 
 .main_nav li svg {
-  position: absolute;
-  left: 15px;
-  bottom: calc(50% - 12px);
+  margin-right: 20px;
+
   width: 26px;
 }
 
@@ -55,10 +61,12 @@
 }
 
 .main_nav li span {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+
   position: relative;
-  display: inline-block;
-  padding: 12px 25px;
-  padding-left: 55px;
+  padding: 12px 28px 12px 12px;
   border-radius: var(--max-border-radius);
   transition: 0.1s ease-in-out 0.03s;
 }
@@ -68,7 +76,7 @@
 }
 
 .logo:hover {
-  background-color: rgb(200, 222, 243);
+  background-color: rgb(225, 236, 247);
 }
 
 .main_nav li:hover span {
