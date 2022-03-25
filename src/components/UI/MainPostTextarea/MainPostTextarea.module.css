@@ -46,9 +46,10 @@
 
 
 .textarea_block textarea::placeholder {
-  font-size: 17px;
+  font-size: 19px;
   font-weight: 500;
   font-family: inherit;
+  color: var(--text-secondary-gray);
 }
 
 .form_buttons {

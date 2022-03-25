@@ -15,6 +15,7 @@ const MainPostTextarea = () => {
   const onTextareaSend = (data: object) => {
     console.log(data);
     setLength(0);
+    setLeft(maxSymbols);
   };
 
   const getColor = (length: number) => {
