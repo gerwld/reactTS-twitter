@@ -19,6 +19,23 @@ const Feed = () => {
     <div className="feed_block">
       <Header>Home</Header>
       <Tweet/>
+      <Tweet/>
+      <Tweet/>
+      <Tweet/>
+      <Tweet/>
+      <Tweet/>
+      <Tweet/>
+      <Tweet/>
+      <Tweet/>
+      <Tweet/>
+      <Tweet/>
+      <Tweet/>
+      <Tweet/>
+      <Tweet/>
+      <Tweet/>
+      <Tweet/>
+      <Tweet/>
+      <Tweet/>
     </div>
   )
 }

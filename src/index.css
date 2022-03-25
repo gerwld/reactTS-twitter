@@ -100,6 +100,7 @@ button {
   max-width: 600px;
   border-left: var(--border-default);
   border-right: var(--border-default);
+  overflow-y: scroll;
 }
 
 /* Feed end */

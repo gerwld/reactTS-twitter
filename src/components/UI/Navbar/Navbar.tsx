@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <div className={s.navbar}>
       <NavLink to="/">
-        <div className={s.logo}><img src="/logo.svg" alt="Logo" /></div>
+        <div className={s.logo}><img src="/logo.svg" alt="Logo" draggable={false}/></div>
       </NavLink>
       <nav className={s.main_nav}>
         <ul>

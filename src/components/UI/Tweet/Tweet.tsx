@@ -9,7 +9,7 @@ const Tweet = () => {
     <div className={s.tweet_block}>
       <div className={s.tweet_sect_1}>
         <div className={s.avatar}>
-          <img src="/avatar.jpeg" alt="Avatar" />
+          <img src="/avatar.jpeg" alt="Avatar" draggable={false} />
         </div>
       </div>
       <div className={s.tweet_sect_2}>
