@@ -32,6 +32,7 @@
 .trend_block {
   padding: 10px 20px;
   border-bottom: 1px solid #e6e6e6;
+  cursor: pointer;
 }
 
 .trend_block span {
