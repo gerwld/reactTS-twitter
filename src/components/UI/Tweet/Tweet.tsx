@@ -3,7 +3,6 @@ import s from "./Tweet.module.css";
 import { NavLink } from "react-router-dom";
 import { AiOutlineRetweet, AiOutlineHeart, AiOutlineLineChart } from "react-icons/ai";
 import { FiMessageCircle, FiShare } from "react-icons/fi";
-import { BiDotsHorizontalRounded } from "react-icons/bi";
 
 const Tweet = () => {
   return (
