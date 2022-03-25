@@ -115,3 +115,34 @@ button {
 }
 
 /* Feed end */
+
+.MuiCircularProgress-colorPrimary {
+  color: var(--text-primary-blue);
+}
+
+.MuiCircularProgress-circle {
+  color: var(--text-primary-blue);
+}
+
+.MuiCircularProgress-root::after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 2.5px solid #eff3f4;
+  outline-offset:-4px;
+  bottom: 0;
+  border-radius: 555px;
+  box-sizing: border-box;
+  z-index: -1;
+}
+
+.MuiCircularProgress-root {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.MuiCircularProgress-svg {
+stroke-linecap: round;
+}

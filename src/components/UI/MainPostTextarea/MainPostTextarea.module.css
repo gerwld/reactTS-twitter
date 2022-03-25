@@ -32,7 +32,6 @@
   font-size: 17px;
   font-family: inherit;
   box-sizing: border-box;
-  /* transition: var(--transition-fast); */
 }
 
 
@@ -40,4 +39,10 @@
   font-size: 17px;
   font-weight: 500;
   font-family: inherit;
+}
+
+.form_buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
