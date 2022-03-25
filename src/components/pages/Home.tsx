@@ -1,43 +1,45 @@
-import React from 'react'
-import Header from '../UI/Header/Header'
-import Navbar from '../UI/Navbar/Navbar'
-import Sidebar from '../UI/Sidebar/Sidebar';
-import Tweet from '../UI/Tweet/Tweet';
+import React from "react";
+import Header from "../UI/Header/Header";
+import Navbar from "../UI/Navbar/Navbar";
+import Sidebar from "../UI/Sidebar/Sidebar";
+import Tweet from "../UI/Tweet/Tweet";
 
 const Home = () => {
   return (
     <div className="home_content content_wrapper">
-      <Navbar/>
-      <Feed/>
-      <Sidebar />
+      <Navbar />
+      <div className="home_group">
+        <Feed />
+        <Sidebar />
+      </div>
     </div>
-  )
-}
+  );
+};
 
 const Feed = () => {
   return (
     <div className="feed_block">
       <Header>Home</Header>
-      <Tweet/>
-      <Tweet/>
-      <Tweet/>
-      <Tweet/>
-      <Tweet/>
-      <Tweet/>
-      <Tweet/>
-      <Tweet/>
-      <Tweet/>
-      <Tweet/>
-      <Tweet/>
-      <Tweet/>
-      <Tweet/>
-      <Tweet/>
-      <Tweet/>
-      <Tweet/>
-      <Tweet/>
-      <Tweet/>
+      <Tweet />
+      <Tweet />
+      <Tweet />
+      <Tweet />
+      <Tweet />
+      <Tweet />
+      <Tweet />
+      <Tweet />
+      <Tweet />
+      <Tweet />
+      <Tweet />
+      <Tweet />
+      <Tweet />
+      <Tweet />
+      <Tweet />
+      <Tweet />
+      <Tweet />
+      <Tweet />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

@@ -1,5 +1,11 @@
 .sidebar_block {
-  flex: 1 0 200px;
-  max-width: 350px;
-  margin-left: 1%;
+  flex: 0 0 350px;
+  width: 350px;
+  margin-left: 10px;
+}
+
+.search_block {
+  position: fixed;
+  width: 350px;
+  top: 0;
 }

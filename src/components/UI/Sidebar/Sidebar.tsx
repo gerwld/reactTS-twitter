@@ -5,7 +5,9 @@ import SearchInput from "../SearchInput/SearchInput";
 const Sidebar = () => {
   return (
     <div className={s.sidebar_block}>
-      <SearchInput />
+      <div className={s.search_block}>
+        <SearchInput />
+      </div>
     </div>
   );
 };
