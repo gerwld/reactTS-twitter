@@ -1,36 +1,40 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import s from "./MainPostTextarea.module.css";
 import { Field } from "react-final-form";
-import SimpleForm from "../../../common/SimpleForm";
 import TextareaAutosize from "react-textarea-autosize";
-import { CircularProgress } from "@mui/material";
-import {IoImageOutline} from "react-icons/io5"
-import {AiOutlineSmile} from "react-icons/ai"
+import { useDispatch, useSelector } from "react-redux";
 
+import SimpleForm from "../../../common/SimpleForm";
+import { RootState } from "../../../redux/reducers";
+import { onPostType } from "../../../redux/actions/post";
+
+import { CircularProgress } from "@mui/material";
+import { IoImageOutline } from "react-icons/io5";
+import { AiOutlineSmile } from "react-icons/ai";
 
 const MainPostTextarea = () => {
-  const maxSymbols = 300;
-  const [length, setLength] = useState(0);
-  const [left, setLeft] = useState(maxSymbols);
+  const dispatch = useDispatch();
+  const { maxLength, currentText } = useSelector(({ post }: RootState) => ({
+    maxLength: post.maxLength,
+    currentText: post.currentPostText,
+  }));
+
+  const length = currentText.length;
+  const left = maxLength - currentText.length;
+
   const onTextareaSend = (data: object) => {
     console.log(data);
-    setLength(0);
-    setLeft(maxSymbols);
+  };
+
+  const onTextAreaChange = (e: any, onChange: Function) => {
+    dispatch(onPostType(e.target.value));
+    onChange(e);
   };
 
   const getColor = (length: number) => {
-    if (length > maxSymbols) {
-      return "secondary";
-    } else if (length >= 280) {
-      return "warning";
-    }
+    if (length > maxLength) return "secondary";
+    else if (length >= 280) return "warning";
     return "primary";
-  };
-
-  const onTextAreaChange = (e: any, onChange: any) => {
-    onChange(e);
-    setLength(e.target.value.length);
-    setLeft(maxSymbols - e.target.value.length);
   };
 
   return (
@@ -39,7 +43,7 @@ const MainPostTextarea = () => {
         <img src="/avatar.jpeg" alt="Profile picture" className={s.avatar} />
       </div>
       <div className={s.form}>
-        <SimpleForm onSend={onTextareaSend}>
+        <SimpleForm onSend={onTextareaSend} initialValue={{ post_content: currentText }}>
           <Field name="post_content">
             {(props) => (
               <TextareaAutosize
@@ -56,14 +60,14 @@ const MainPostTextarea = () => {
           <div className={s.form_buttons}>
             <div className={s.btn_group}>
               <button type="button" className={`${s.btn} ${s.btn_media}`}>
-              <IoImageOutline />
+                <IoImageOutline />
               </button>
               <button type="button" className={`${s.btn} ${s.btn_emoji}`}>
                 <AiOutlineSmile />
               </button>
             </div>
             <div className={s.progressBar}>
-              <span className={left < 0 ? s.warning : ''}>{left}</span>
+              <span className={left < 0 ? s.warning : ""}>{left}</span>
               <CircularProgress
                 size={22}
                 color={getColor(length)}
@@ -73,7 +77,12 @@ const MainPostTextarea = () => {
                 value={length <= 300 ? Math.ceil(length / 3) : 100}
               />
             </div>
-            <button className={s.btn_send + ' button_ct'} type="submit" disabled={length > maxSymbols || length < 1}>Tweet</button>
+            <button
+              className={s.btn_send + " button_ct"}
+              type="submit"
+              disabled={length > maxLength || length < 1}>
+              Tweet
+            </button>
           </div>
         </SimpleForm>
       </div>
