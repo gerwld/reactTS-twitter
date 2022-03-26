@@ -24,7 +24,7 @@ const Tweet = ({data}) => {
             </span>
             <span className={s.datetime}>Oct 4, 2020</span>
           </div>
-          <button className={`${s.btn} ${s.btn_opt}`}>
+          {/* <button className={`${s.btn} ${s.btn_opt}`}>
             <svg
               viewBox="0 0 24 24"
               aria-hidden="true"
@@ -35,7 +35,7 @@ const Tweet = ({data}) => {
                 <circle cx="19" cy="12" r="2"></circle>
               </g>
             </svg>
-          </button>
+          </button> */}
         </div>
         <div className={s.post}>
           {text}

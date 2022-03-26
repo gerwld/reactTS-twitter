@@ -30,7 +30,7 @@ const Home = () => {
 
 const Feed = () => {
   const tweets = useSelector(selectTweetsPost);
-  const isLoading = useSelector(selectTweetsLoadingStatus) === "LOADING";
+  const isLoading = useSelector(selectTweetsLoadingStatus);
 
   return (
     <div className="feed_block">

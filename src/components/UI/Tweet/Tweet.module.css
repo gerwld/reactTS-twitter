@@ -18,6 +18,8 @@
 .avatar {
   overflow: hidden;
   cursor: pointer;
+  font-size: 0;
+  background-color: rgb(236, 236, 236);
 }
 
 .avatar, 
