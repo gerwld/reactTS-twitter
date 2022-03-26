@@ -4,22 +4,23 @@ import { NavLink } from "react-router-dom";
 import { AiOutlineRetweet, AiOutlineHeart, AiOutlineLineChart } from "react-icons/ai";
 import { FiMessageCircle, FiShare } from "react-icons/fi";
 
-const Tweet = () => {
+const Tweet = ({data}) => {
+  const {user, text} = data;
   return (
     <div className={s.tweet_block}>
       <div className={s.tweet_sect_1}>
         <div className={s.avatar}>
-          <img src="/avatar.jpeg" alt="Avatar" draggable={false} />
+          <img src={user.avatarUrl} alt="Avatar" draggable={false} />
         </div>
       </div>
       <div className={s.tweet_sect_2}>
         <div className={s.tweet_priminfo}>
           <div className={s.tweet_group}>
             <span className={s.name}>
-              <NavLink to="/">Patryk Jaworski</NavLink>
+              <NavLink to="/">{user.fullname}</NavLink>
             </span>
             <span className={s.username}>
-              <NavLink to="/">@user_name</NavLink>
+              <NavLink to="/">@{user.username}</NavLink>
             </span>
             <span className={s.datetime}>Oct 4, 2020</span>
           </div>
@@ -37,7 +38,7 @@ const Tweet = () => {
           </button>
         </div>
         <div className={s.post}>
-          Telegram упал впервые за 4 года использования. Интересно, на долго ли это?
+          {text}
         </div>
         <div className={s.buttons}>
           <button className={`${s.btn} ${s.btn_reply}`}>

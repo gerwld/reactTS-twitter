@@ -7,7 +7,7 @@ import MainPostTextarea from '../UI/MainPostTextarea/MainPostTextarea';
 import { useDispatch } from 'react-redux';
 import { fetchPosts } from "../../redux/actions/post";
 import { useSelector } from 'react-redux';
-import { selectTweets } from '../../redux/selectors';
+import { selectTweetsPost } from '../../redux/selectors';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -29,29 +29,12 @@ const Home = () => {
 };
 
 const Feed = () => {
-  const tweets = useSelector(selectTweets);
+  const tweets = useSelector(selectTweetsPost);
   return (
     <div className="feed_block">
       <Header>Home</Header>
       <MainPostTextarea/>
-      <Tweet />
-      <Tweet />
-      <Tweet />
-      <Tweet />
-      <Tweet />
-      <Tweet />
-      <Tweet />
-      <Tweet />
-      <Tweet />
-      <Tweet />
-      <Tweet />
-      <Tweet />
-      <Tweet />
-      <Tweet />
-      <Tweet />
-      <Tweet />
-      <Tweet />
-      <Tweet />
+      {tweets?.map(tweet => <Tweet key={tweet._id} data={tweet} />)}
     </div>
   );
 };
