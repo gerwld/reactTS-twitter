@@ -3,14 +3,14 @@ import produce from "immer";
 import { PostActionsTypes } from "../actions/post";
 import { LoadingStatus } from "../types";
 
-const initialState = {
+const PostsState = {
   currentPostText: "",
   maxLength: 300,
   posts: undefined,
   LoadingStatus: LoadingStatus.NEVER,
 };
 
-const postReducer = (state = initialState, action: any) => {
+const postReducer = (state = PostsState, action: any) => {
   switch (action.type) {
     case PostActionsTypes.ON_POST_TYPE:
       return {
@@ -41,6 +41,6 @@ const postReducerOnImmer = produce((draft, action) => {
     default:
       break;
   }
-}, initialState);
+}, PostsState);
 
 export default postReducerOnImmer;

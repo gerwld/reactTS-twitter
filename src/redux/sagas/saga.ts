@@ -8,12 +8,11 @@ export function* fetchPostsRequest() {
   try {
     const data:Promise<AxiosResponse> = yield call(PostsAPI.fetchPosts);
     yield put(setPosts(data)); 
-    console.log('я родился');
   } catch (error) {
     yield put(setLoadingState(LoadingStatus.ERROR)); 
   }
 }
 
-export function* watchIncrementAsync() {
+export function* postSaga() {
   yield takeLatest(PostActionsTypes.FETCH_POSTS_DATA, fetchPostsRequest)
 }
