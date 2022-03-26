@@ -9,6 +9,7 @@ export const privateRoutes = [
   // { path: "*", component: Navigate, toPath: "/not-found" },
   { path: "/not-found", component: NotFound },
   { path: "/home", component: Home },
+  { path: "/home/*", component: Home },
 ];
 
 export const publicRoutes = [

@@ -9,7 +9,9 @@ import { fetchPosts } from "../../redux/actions/post";
 import { useSelector } from "react-redux";
 import { selectTweetsPost, selectTweetsLoadingStatus } from "../../redux/selectors";
 import Loader from "../UI/Loader/Loader";
-import { fetchTopics } from '../../redux/actions/sidebar';
+import { fetchTopics } from "../../redux/actions/sidebar";
+import { Routes } from "react-router-dom";
+import { Route } from "react-router-dom";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -37,7 +39,10 @@ const Feed = () => {
   return (
     <div className="feed_block">
       <Header>Home</Header>
-      <MainPostTextarea />
+      <Routes>
+        <Route path="/" element={<MainPostTextarea />} />
+      </Routes>
+
       {isLoading ? <Loader /> : tweets?.map((tweet: any) => <Tweet key={tweet._id} data={tweet} />)}
     </div>
   );
