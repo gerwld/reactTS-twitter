@@ -1,0 +1,100 @@
+{
+  "tweets": [
+      {
+        "_id": "623f0e3c45a5afebfd10371f",
+        "text": "Reprehenderit aute labore commodo laboris ex ad irure et magna est ad velit qui culpa. Cillum aliqua ea adipisicing exercitation. Aute sint nostrud amet aliqua duis excepteur anim qui. Commodo officia ea ex officia. Qui id nulla exercitation occaecat et cupidatat.",
+        "user": {
+          "fullname": "Consuelo Wong",
+          "username": "poole",
+          "avatarUrl": "https://source.unsplash.com/random/100x100"
+        }
+      },
+      {
+        "_id": "623f0e3c8a5b74683d660f66",
+        "text": "Commodo consequat do magna ipsum id exercitation fugiat incididunt proident. Laboris aliquip enim ex laboris. Nulla velit veniam labore amet labore id aute officia duis ut ad magna. Enim voluptate tempor labore enim Lorem excepteur ullamco deserunt laboris officia. Mollit quis tempor ullamco anim quis id.",
+        "user": {
+          "fullname": "Parsons Barrera",
+          "username": "ruiz",
+          "avatarUrl": "https://source.unsplash.com/random/100x100"
+        }
+      },
+      {
+        "_id": "623f0e3ce9a52aa36a2feffb",
+        "text": "Consequat irure consectetur consequat ad labore et duis excepteur laboris. Nostrud pariatur id ea fugiat. Sunt cupidatat exercitation ipsum incididunt occaecat commodo tempor consequat enim duis aliquip proident ex labore. Lorem cupidatat nostrud minim tempor non et duis veniam magna ullamco dolor veniam sit do. Reprehenderit eiusmod et enim ullamco.",
+        "user": {
+          "fullname": "Jessie Jarvis",
+          "username": "key",
+          "avatarUrl": "https://source.unsplash.com/random/100x100"
+        }
+      },
+      {
+        "_id": "623f0e3ca833f5e537a58785",
+        "text": "Tempor culpa magna proident in elit duis veniam enim ipsum irure velit. Sunt laboris sunt labore velit reprehenderit dolore non labore ullamco in reprehenderit nostrud esse. Consectetur aliqua occaecat consequat exercitation occaecat esse consequat ex officia veniam occaecat laborum in. Dolor nisi qui labore cillum labore. Deserunt amet minim pariatur elit tempor cupidatat cillum laborum fugiat ut labore cillum commodo.",
+        "user": {
+          "fullname": "Isabel Franks",
+          "username": "le",
+          "avatarUrl": "https://source.unsplash.com/random/100x100"
+        }
+      },
+      {
+        "_id": "623f0e3c5f49a4c866a1f3c3",
+        "text": "Consequat laborum velit fugiat elit duis. Velit pariatur dolore elit ullamco sit irure ad nulla culpa nulla qui aliquip dolore velit. Aliqua minim cillum labore elit officia ea. Nulla do aute eiusmod nisi in. Nulla sint aute Lorem magna ut.",
+        "user": {
+          "fullname": "Carey Cote",
+          "username": "fields",
+          "avatarUrl": "https://source.unsplash.com/random/100x100"
+        }
+      },
+      {
+        "_id": "623f0e3c952868987fd9168b",
+        "text": "Elit eiusmod cillum aliqua veniam. In do nostrud et labore dolore. Commodo adipisicing laborum culpa Lorem eu sit id esse fugiat. Consectetur elit velit dolore aliqua deserunt esse consectetur laboris duis elit ex. Laboris officia et dolore laborum exercitation sit non ut non irure irure est.",
+        "user": {
+          "fullname": "Inez Trujillo",
+          "username": "nicholson",
+          "avatarUrl": "https://source.unsplash.com/random/100x100"
+        }
+      },
+      {
+        "_id": "623f0e3c681e01d3368068e0",
+        "text": "Veniam aliqua incididunt enim laborum aliquip incididunt aliquip incididunt minim ut labore laborum dolor quis. Id ad eiusmod occaecat excepteur dolor esse Lorem. Dolor eiusmod et nisi amet laborum esse sit. Et minim laboris ipsum duis et. Officia qui incididunt culpa mollit pariatur ipsum occaecat duis aliquip commodo sunt excepteur in eu.",
+        "user": {
+          "fullname": "Barr Mcdowell",
+          "username": "dodson",
+          "avatarUrl": "https://source.unsplash.com/random/100x100"
+        }
+      },
+      {
+        "_id": "623f0e3c590ee352c6dccffc",
+        "text": "Consequat qui eiusmod qui commodo esse reprehenderit tempor nostrud eiusmod qui esse anim in. Commodo ad consectetur tempor magna consequat dolor quis aliqua sint ea consectetur aute eiusmod. Ipsum excepteur quis magna nisi esse culpa in excepteur voluptate et esse dolor duis. Elit pariatur non sit nisi pariatur enim minim laboris ipsum laboris laborum. Amet dolor enim exercitation veniam occaecat incididunt in velit voluptate labore consequat sit elit.",
+        "user": {
+          "fullname": "Pam Sargent",
+          "username": "solis",
+          "avatarUrl": "https://source.unsplash.com/random/100x100"
+        }
+      },
+      {
+        "_id": "623f0e3c5143896f09b0a510",
+        "text": "Aliqua sunt sunt Lorem in cupidatat ea aliquip. Commodo ullamco commodo velit do anim aliquip proident. Nulla et reprehenderit elit pariatur voluptate aute minim voluptate laboris. Commodo proident proident cillum sit deserunt exercitation enim fugiat incididunt et est adipisicing. Adipisicing dolore incididunt laborum sit id do enim dolor adipisicing Lorem esse eiusmod sunt.",
+        "user": {
+          "fullname": "Garza Diaz",
+          "username": "mercer",
+          "avatarUrl": "https://source.unsplash.com/random/100x100"
+        }
+      },
+      {
+        "_id": "623f0e3cdc3290787d9f81fd",
+        "text": "Tempor exercitation sunt minim enim id adipisicing dolore mollit laborum exercitation aliqua ex eu. Mollit excepteur pariatur nisi nisi dolore enim dolor enim officia id irure eiusmod. Ullamco ut adipisicing magna esse ullamco anim veniam consequat. Elit duis pariatur mollit dolor ea reprehenderit duis. Tempor deserunt ut sit duis veniam consequat occaecat consectetur ut irure.",
+        "user": {
+          "fullname": "Briggs Sheppard",
+          "username": "hudson",
+          "avatarUrl": "https://source.unsplash.com/random/100x100"
+        }
+      }
+    ],
+    "user": {
+      "_id": "100000001",
+      "fullname": "P Jaworski",
+      "username": "p_jaworski63",
+      "avatarUrl": "/avatar.jpeg"
+    }
+  }
