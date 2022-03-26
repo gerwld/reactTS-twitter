@@ -2,7 +2,8 @@ import { Action } from "redux"
 
 export enum PostActionsTypes {
   ON_POST_TYPE = "twitter-ts/post/ON_POST_TYPE",
-  FETCH_POSTS = "twitter-ts/post/FETCH_POSTS"
+  FETCH_POSTS = "twitter-ts/post/FETCH_POSTS",
+  SET_LOADING_STATE = "twitter-ts/post/SET_LOADING_STATE",
 }
 
 export interface PostActionInterface extends Action<PostActionsTypes> {
@@ -10,14 +11,19 @@ export interface PostActionInterface extends Action<PostActionsTypes> {
   payload: object | string
 }
 
-export const onPostType = (value: string): PostActionInterface => ({
+export const onPostType = (payload: string): PostActionInterface => ({
   type: PostActionsTypes.ON_POST_TYPE,
-  payload: value
+  payload
 })
 
-export const fetchPosts = (obj: object): PostActionInterface => ({
+export const fetchPosts = (payload: object): PostActionInterface => ({
   type: PostActionsTypes.FETCH_POSTS,
-  payload: obj
+  payload
+})
+
+export const setLoadingState = (payload: string): PostActionInterface => ({
+  type: PostActionsTypes.SET_LOADING_STATE,
+  payload
 })
 
 
