@@ -2,10 +2,10 @@ import { Action } from "redux"
 
 export enum PostActionsTypes {
   ON_POST_TYPE = "twitter-ts/post/ON_POST_TYPE",
-  GET_LAST_POSTS = "twitter-ts/post/GET_LAST_POSTS"
+  FETCH_POSTS = "twitter-ts/post/FETCH_POSTS"
 }
 
-export interface PostActionInterface extends Action {
+export interface PostActionInterface extends Action<PostActionsTypes> {
   type: PostActionsTypes,
   payload: object | string
 }
@@ -15,7 +15,10 @@ export const onPostType = (value: string): PostActionInterface => ({
   payload: value
 })
 
-export const getAllPosts = (obj: object): PostActionInterface => ({
-  type: PostActionsTypes.GET_LAST_POSTS,
+export const fetchPosts = (obj: object): PostActionInterface => ({
+  type: PostActionsTypes.FETCH_POSTS,
   payload: obj
 })
+
+
+export type PostActions = PostActionInterface;
