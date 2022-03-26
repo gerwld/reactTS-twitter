@@ -23,17 +23,20 @@ const postReducer = (state = initialState, action: any) => {
 };
 
 const postReducerOnImmer = produce((draft, action) => {
-  const { payload } = action;
   switch (action.type) {
     case PostActionsTypes.ON_POST_TYPE:
-      draft.currentPostText = payload;
+      draft.currentPostText = action.payload;
       break;
-    case PostActionsTypes.FETCH_POSTS:
-      draft.posts = payload;
+    case PostActionsTypes.FETCH_POSTS_DATA:
+      draft.posts = undefined;
+      draft.LoadingStatus = LoadingStatus.LOADING;
+      break;
+    case PostActionsTypes.SET_POSTS_DATA:
+      draft.posts = action.payload;
       draft.LoadingStatus = LoadingStatus.LOADED;
       break;
     case PostActionsTypes.SET_LOADING_STATE:
-      draft.LoadingStatus = payload;
+      draft.LoadingStatus = action.payload;
       break;
     default:
       break;

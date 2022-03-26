@@ -1,11 +1,18 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Header from "../UI/Header/Header";
 import Navbar from "../UI/Navbar/Navbar";
 import Sidebar from "../UI/Sidebar/Sidebar";
 import Tweet from "../UI/Tweet/Tweet";
 import MainPostTextarea from '../UI/MainPostTextarea/MainPostTextarea';
+import { useDispatch } from 'react-redux';
+import { fetchPosts } from "../../redux/actions/post";
 
 const Home = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchPosts());
+  }, [])
   return (
     <div className="home_content content_wrapper">
       <Navbar />
