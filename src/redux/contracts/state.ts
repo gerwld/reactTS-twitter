@@ -21,6 +21,12 @@ export interface TweetsState {
   LoadingStatus: LoadingStatus;
 }
 
+export interface SidebarState {
+  topics: any[],
+  LoadingState: LoadingStatus;
+  
+}
+
 export interface User {
   _id?: string;
   email: string;

@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
-import { privateRoutes, publicRoutes } from './routes/routes';
+import { privateRoutes, publicRoutes } from '../routes/routes';
 
 const AppRouter: React.FC = (): React.ReactElement => {
   const [isAuth, setIsAuth] = useState(true);

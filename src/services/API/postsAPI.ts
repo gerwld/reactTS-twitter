@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from "axios";
 
 export const PostsAPI = {
-  fetchPosts(): Promise<AxiosResponse> {
+  fetchPosts() {
     return axios.get("/tweets").then(e => e.data);
   }
 }

@@ -92,10 +92,10 @@
       }
     ],
     "topics": [
-      {"name": "Беларусь", "count": 202354},
-      {"name": "Duda", "count": 435},
-      {"name": "StandWithUkraine", "count": 23522},
-      {"name": "Szwedzi", "count": 65778}
+      {"name": "Беларусь", "amount": 202354},
+      {"name": "Duda", "amount": 435},
+      {"name": "#StandWithUkraine", "amount": 23522},
+      {"name": "Szwedzi", "amount": 65778}
     ],
     "users": [
       {

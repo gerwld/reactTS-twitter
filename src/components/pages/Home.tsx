@@ -9,12 +9,14 @@ import { fetchPosts } from "../../redux/actions/post";
 import { useSelector } from "react-redux";
 import { selectTweetsPost, selectTweetsLoadingStatus } from "../../redux/selectors";
 import Loader from "../UI/Loader/Loader";
+import { fetchTopics } from '../../redux/actions/sidebar';
 
 const Home = () => {
   const dispatch = useDispatch();
 
   React.useEffect(() => {
-    dispatch(fetchPosts());
+    dispatch(fetchPosts);
+    dispatch(fetchTopics);
   }, []);
 
   return (

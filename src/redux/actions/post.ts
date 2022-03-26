@@ -17,9 +17,9 @@ export const onPostType = (payload: string): PostActions => ({
   payload
 })
 
-export const fetchPosts = () => ({
+export const fetchPosts = {
   type: PostActionsTypes.FETCH_POSTS_DATA,
-})
+}
 
 export const setPosts = (payload: object) => ({
   type: PostActionsTypes.SET_POSTS_DATA,

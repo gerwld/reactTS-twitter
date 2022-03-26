@@ -1,6 +1,9 @@
 import React from "react";
 import s from "./Sidebar.module.css";
 import SearchInput from "../SearchInput/SearchInput";
+import { useSelector } from "react-redux";
+import { selectSidebarTopics } from "../../../redux/selectors";
+import { NavLink } from "react-router-dom";
 
 const Sidebar = () => {
   return (
@@ -14,23 +17,17 @@ const Sidebar = () => {
   );
 };
 
-const trends = [
-  { name: "Duda", amount: "3,028" },
-  { name: "#WorldCup2022", amount: "9,002" },
-  { name: "Szwedzi", amount: "12,076" },
-  { name: "Szojgu", amount: "23,628" },
-];
-
 const whoFollow = [
-  {name: "Duda", username: "duda", avatar: "/avatar_2.jpeg"},
-  {name: "Bill Gates", username: "BillGates", avatar: "/avatar_2.jpeg"},
+  { name: "Duda", username: "duda", avatar: "/avatar_2.jpeg" },
+  { name: "Bill Gates", username: "BillGates", avatar: "/avatar_2.jpeg" },
 ];
 
 const ActualTrends = () => {
+  const trends = useSelector(selectSidebarTopics);
   return (
     <div className={s.sb_block}>
       <h3>Trends for you</h3>
-      {trends.map((e) => (
+      {trends?.map((e) => (
         <Trend key={e.name} name={e.name} amount={e.amount} />
       ))}
     </div>
@@ -39,24 +36,19 @@ const ActualTrends = () => {
 
 const Trend: React.FC<TrendsProps> = ({ name, amount }) => {
   return (
-    <div className={s.trend_block}>
-      <span className={s.name}>{name}</span>
-      <span className={s.amount}>{amount} Tweets</span>
-    </div>
+    <NavLink className={s.trend_block} to={`/home/search?q=${name}`}>
+        <span className={s.name}>{name}</span>
+        <span className={s.amount}>{amount} Tweets</span>
+    </NavLink>
   );
 };
-
-interface TrendsProps {
-  name: string;
-  amount: string | number;
-}
 
 const WhoFollow = () => {
   return (
     <div className={s.sb_block}>
       <h3>Who to follow</h3>
       {whoFollow.map((e) => (
-        <FollowBlock key={e.name} name={e.name} username={e.username} avatar={e.avatar}/>
+        <FollowBlock key={e.name} name={e.name} username={e.username} avatar={e.avatar} />
       ))}
     </div>
   );
@@ -66,7 +58,7 @@ const FollowBlock: React.FC<WhoFollowProps> = ({ name, username, avatar }) => {
   return (
     <div className={s.follow_block}>
       <div className={s.avatar}>
-        <img src={avatar} alt={name + ' user avatar'} />
+        <img src={avatar} alt={name + " user avatar"} />
       </div>
       <div className={s.follow_info}>
         <span className={s.name}>{name}</span>
@@ -76,6 +68,11 @@ const FollowBlock: React.FC<WhoFollowProps> = ({ name, username, avatar }) => {
     </div>
   );
 };
+
+interface TrendsProps {
+  name: string;
+  amount: string | number;
+}
 
 interface WhoFollowProps {
   name: string;
