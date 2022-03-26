@@ -1,0 +1,19 @@
+.modal_post {
+ align-items: flex-start;
+}
+
+.modal_post > div {
+  padding: 0;
+  margin-top: 4vh;
+}
+
+.modal_post > div > div {
+  min-width: 600px;
+  border-bottom: 0;
+
+}
+
+.modal_post textarea {
+  height: 200px;
+  min-height: 200px;
+}

@@ -9,11 +9,11 @@ import store from "./redux/redux-store";
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Provider store={store}>
-        <BrowserRouter>
+      <BrowserRouter>
+        <Provider store={store}>
           <AppRouter />
-        </BrowserRouter>
-      </Provider>
+        </Provider>
+      </BrowserRouter>
     </ThemeProvider>
   );
 }

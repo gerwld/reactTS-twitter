@@ -70,7 +70,7 @@
   border: none;
   border-radius: var(--max-border-radius);
 
-  transition: var(--transition-default);
+  transition: var(--transition-middle);
 }
 
 .btn_opt {

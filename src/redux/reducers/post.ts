@@ -1,14 +1,14 @@
 import React from 'react'
-import { ON_POST_TYPE } from '../actions/post';
+import { PostActionsTypes } from '../actions/post';
 
 const initialState = {
-  currentPostText: "wgwedfvdfbdfbdfbdfb",
+  currentPostText: "",
   maxLength: 300,
 }
 
-const postReducer = (state = initialState, action) => {
+const postReducer = (state = initialState, action:any) => {
   switch(action.type) {
-    case ON_POST_TYPE:
+    case PostActionsTypes.ON_POST_TYPE:
       return {
         ...state,
         currentPostText: action.payload,

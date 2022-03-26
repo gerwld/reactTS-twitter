@@ -10,7 +10,7 @@ const Navbar = () => {
     setPopup(true);
   }
   return (
-    <div className="navbar_wrapper">
+    <div className={s.navbar_wrapper}>
     <div className={s.navbar}>
       <div className={s.navbar_sect}>
         <NavLink to="/">

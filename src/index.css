@@ -19,7 +19,7 @@
 --hover-blue: #E2EEF6;
 --hover-darker: rgba(0, 0, 0, 0.03);
 
---transition-default: 0.2s ease-in-out 0.02s;
+--transition-default: 0.2s ease-in 0.02s;
 --transition-middle: 0.15s ease;
 --transition-fast: 0.2s ease;
 }
