@@ -12,7 +12,7 @@ export interface PostActionInterface extends Action<PostActionsTypes> {
   payload: object | string
 }
 
-export const onPostType = (payload: string): PostActionInterface => ({
+export const onPostType = (payload: string): PostActions => ({
   type: PostActionsTypes.ON_POST_TYPE,
   payload
 })
@@ -26,7 +26,7 @@ export const setPosts = (payload: object) => ({
   payload
 })
 
-export const setLoadingState = (payload: string): PostActionInterface => ({
+export const setLoadingState = (payload: string): PostActions => ({
   type: PostActionsTypes.SET_LOADING_STATE,
   payload
 })

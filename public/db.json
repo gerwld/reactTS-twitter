@@ -91,6 +91,32 @@
         }
       }
     ],
+    "topics": [
+      {"name": "Беларусь", "count": 202354},
+      {"name": "Duda", "count": 435},
+      {"name": "StandWithUkraine", "count": 23522},
+      {"name": "Szwedzi", "count": 65778}
+    ],
+    "users": [
+      {
+        "_id": "101",
+        "fullname": "Consuelo Wong",
+        "username": "poole",
+        "avatarUrl": "https://source.unsplash.com/random/100x100"
+      },
+      {
+        "_id": "102",
+        "fullname": "Consuelo Bong",
+        "username": "poole",
+        "avatarUrl": "https://source.unsplash.com/random/100x100"
+      },
+      {
+        "_id": "103",
+        "fullname": "Consuelo Dong",
+        "username": "poole",
+        "avatarUrl": "https://source.unsplash.com/random/100x100"
+      }
+    ],
     "user": {
       "_id": "100000001",
       "fullname": "P Jaworski",
