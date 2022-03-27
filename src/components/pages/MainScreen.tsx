@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../UI/Header/Header";
 import Navbar from "../UI/Navbar/Navbar";
 import Sidebar from "../UI/Sidebar/Sidebar";
@@ -10,11 +10,13 @@ import { useSelector } from "react-redux";
 import { selectTweetsPost, selectTweetsLoadingStatus } from "../../redux/selectors";
 import Loader from "../UI/Loader/Loader";
 import { fetchTopics } from "../../redux/actions/sidebar";
-import { Routes } from "react-router-dom";
+import { Routes, useLocation, useMatch } from "react-router-dom";
 import { Route } from "react-router-dom";
+import { allRouteTitles, getTitleByLocation } from "../../routes/routes";
 
 const Home = () => {
   const dispatch = useDispatch();
+  
 
   React.useEffect(() => {
     dispatch(fetchPosts);
@@ -33,19 +35,36 @@ const Home = () => {
 };
 
 const Feed = () => {
-  const tweets = useSelector(selectTweetsPost);
-  const isLoading = useSelector(selectTweetsLoadingStatus);
-
+  const loc = useLocation().pathname;
+  const [title, setTitle] = useState('Home');
+  useEffect(() => {
+    setTitle(getTitleByLocation(loc, allRouteTitles));
+  },[loc])
+  
   return (
     <div className="feed_block">
-      <Header>Home</Header>
+      <Header>{title}</Header>
       <Routes>
-        <Route path="/" element={<MainPostTextarea />} />
+        <Route
+          path="/"
+          element={
+            <>
+              <MainPostTextarea />
+              <TweetsMap />
+            </>
+          }
+        />
       </Routes>
-
-      {isLoading ? <Loader /> : tweets?.map((tweet: any) => <Tweet key={tweet._id} data={tweet} />)}
     </div>
   );
+};
+
+const TweetsMap = () => {
+  const tweets = useSelector(selectTweetsPost);
+  const isLoading = useSelector(selectTweetsLoadingStatus);
+  if (isLoading) return <Loader />;
+  if (tweets) return tweets.map((tweet: any) => <Tweet key={tweet._id} {...tweet} />);
+  return "";
 };
 
 export default Home;

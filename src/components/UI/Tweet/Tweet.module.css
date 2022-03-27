@@ -15,6 +15,11 @@
   background-color: rgb(0, 0, 0, 0.03);
 }
 
+.tweet_wrapper {
+  text-decoration: none;
+  color: inherit;
+}
+
 .avatar {
   overflow: hidden;
   cursor: pointer;
@@ -130,17 +135,17 @@
 /* buttons end */
 
 
-.name a {
+.name {
   font-weight: bold;
   text-decoration: none;
   color: var(--text-primary-black);
 }
 
-.name a:hover {
+.name:hover {
   text-decoration: underline;
 }
 
-.username a, 
+.username, 
 .datetime {
   text-decoration: none;
   color: var(--text-primary-gray);
