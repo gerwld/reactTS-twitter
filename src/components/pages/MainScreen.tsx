@@ -16,7 +16,6 @@ import { allRouteTitles, getTitleByLocation } from "../../routes/routes";
 
 const Home = () => {
   const dispatch = useDispatch();
-  
 
   React.useEffect(() => {
     dispatch(fetchPosts);
@@ -36,11 +35,12 @@ const Home = () => {
 
 const Feed = () => {
   const loc = useLocation().pathname;
-  const [title, setTitle] = useState('Home');
+  const [title, setTitle] = useState("Home");
+
   useEffect(() => {
     setTitle(getTitleByLocation(loc, allRouteTitles));
-  },[loc])
-  
+  }, [loc]);
+
   return (
     <div className="feed_block">
       <Header>{title}</Header>
