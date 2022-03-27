@@ -1,18 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+
 import Header from "../UI/Header/Header";
 import Navbar from "../UI/Navbar/Navbar";
 import Sidebar from "../UI/Sidebar/Sidebar";
 import Tweet from "../UI/Tweet/Tweet";
 import MainPostTextarea from "../UI/MainPostTextarea/MainPostTextarea";
-import { useDispatch } from "react-redux";
-import { fetchPosts } from "../../redux/actions/post";
-import { useSelector } from "react-redux";
-import { selectTweetsPost, selectTweetsLoadingStatus } from "../../redux/selectors";
 import Loader from "../UI/Loader/Loader";
+
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+import { fetchPosts } from "../../redux/actions/post";
+import { selectTweetsPost, selectTweetsLoadingStatus } from "../../redux/selectors";
 import { fetchTopics } from "../../redux/actions/sidebar";
-import { Routes, useLocation, useMatch } from "react-router-dom";
+import { Routes } from "react-router-dom";
 import { Route } from "react-router-dom";
-import { allRouteTitles, getTitleByLocation } from "../../routes/routes";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -34,16 +35,9 @@ const Home = () => {
 };
 
 const Feed = () => {
-  const loc = useLocation().pathname;
-  const [title, setTitle] = useState("Home");
-
-  useEffect(() => {
-    setTitle(getTitleByLocation(loc, allRouteTitles));
-  }, [loc]);
-
   return (
     <div className="feed_block">
-      <Header>{title}</Header>
+      <Header/>
       <Routes>
         <Route
           path="/"
