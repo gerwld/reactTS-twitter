@@ -14,40 +14,35 @@ import { selectTweetsPost, selectTweetsLoadingStatus } from "../../redux/selecto
 import { fetchTopics } from "../../redux/actions/sidebar";
 import { Routes } from "react-router-dom";
 import { Route } from "react-router-dom";
+import { Navigate } from 'react-router';
 
 const Home = () => {
   const dispatch = useDispatch();
 
   React.useEffect(() => {
     dispatch(fetchPosts);
-    dispatch(fetchTopics);
   }, []);
 
   return (
-    <div className="home_content content_wrapper">
-      <Navbar />
-      <div className="home_group">
-        <Feed />
-        <Sidebar />
-      </div>
-    </div>
+    <>
+      <MainPostTextarea />
+      <TweetsMap />
+    </>
   );
 };
 
-const Feed = () => {
+export const FeedBlock = () => {
+  const dispatch = useDispatch();
+
+  React.useEffect(() => {
+    dispatch(fetchTopics);
+  }, []);
   return (
     <div className="feed_block">
-      <Header/>
+      <Header />
       <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <MainPostTextarea />
-              <TweetsMap />
-            </>
-          }
-        />
+        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Navigate to="/home" />} />
       </Routes>
     </div>
   );
@@ -61,4 +56,4 @@ const TweetsMap = () => {
   return "";
 };
 
-export default Home;
+// export default Home;

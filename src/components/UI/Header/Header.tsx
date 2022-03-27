@@ -1,15 +1,17 @@
 import React, {useState, useEffect} from "react";
 import s from "./Header.module.css";
 import { useLocation } from 'react-router-dom';
-import { allRouteTitles, getTitleByLocation } from "../../../routes/routes";
 import { BsArrowLeftShort } from "react-icons/bs";
 import { useNavigate } from 'react-router-dom';
+import { allRouteTitles, getTitleByLocation } from "../../../routes/routeTitle";
+
 
 const Header: React.FC<HeaderProps> = ({ children }) => {
   const navigate = useNavigate();
   const loc = useLocation().pathname;
   const [title, setTitle] = useState("Home");
   const [isBtnBack, setBtn] = useState(false);
+  
 
   useEffect(() => {
     const title = getTitleByLocation(loc, allRouteTitles);
