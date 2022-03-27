@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import s from "./Tweet.module.css";
 import { NavLink } from "react-router-dom";
 import { AiOutlineRetweet, AiOutlineHeart, AiOutlineLineChart } from "react-icons/ai";
 import { FiMessageCircle, FiShare } from "react-icons/fi";
+import { changeTitle } from '../../../services/title';
 
 const Tweet = ({ user, _id, text }) => {
   return (
@@ -20,7 +21,7 @@ const Tweet = ({ user, _id, text }) => {
               <span className={s.username}>@{user.username}</span>
               <span className={s.datetime}>Oct 4, 2020</span>
             </div>
-            {/* <button className={`${s.btn} ${s.btn_opt}`}>
+            <button className={`${s.btn} ${s.btn_opt}`}>
             <svg
               viewBox="0 0 24 24"
               aria-hidden="true"
@@ -31,7 +32,7 @@ const Tweet = ({ user, _id, text }) => {
                 <circle cx="19" cy="12" r="2"></circle>
               </g>
             </svg>
-          </button> */}
+          </button>
           </div>
           <div className={s.post}>{text}</div>
           <div className={s.buttons}>
@@ -57,7 +58,13 @@ const Tweet = ({ user, _id, text }) => {
   );
 };
 
-export const TweetPageGlobal = ({ user, _id, text }) => {
+export const TweetPageGlobal = ({ user, text }) => {
+  useEffect(() => {
+    changeTitle(`${user.fullname} on Twitter: "${text}"`);
+    return changeTitle;
+
+  });
+
   return (
     <div className={s.tweet_pageblock}>
       <div className={s.pageblock_sect_1}>
@@ -66,20 +73,18 @@ export const TweetPageGlobal = ({ user, _id, text }) => {
         </div>
 
         <div className={s.tweet_priminfo}>
-    
-            <span className={s.name}>{user.fullname}</span>
-            <span className={s.username}>@{user.username}</span>
-        
+          <span className={s.name}>{user.fullname}</span>
+          <span className={s.username}>@{user.username}</span>
         </div>
         <button className={`${s.btn} ${s.btn_opt}`}>
-            <svg viewBox="0 0 24 24" aria-hidden="true" className="svg">
-              <g>
-                <circle cx="5" cy="12" r="2"></circle>
-                <circle cx="12" cy="12" r="2"></circle>
-                <circle cx="19" cy="12" r="2"></circle>
-              </g>
-            </svg>
-          </button>
+          <svg viewBox="0 0 24 24" aria-hidden="true" className="svg">
+            <g>
+              <circle cx="5" cy="12" r="2"></circle>
+              <circle cx="12" cy="12" r="2"></circle>
+              <circle cx="19" cy="12" r="2"></circle>
+            </g>
+          </svg>
+        </button>
       </div>
       <div className={s.tweet_sect_2}>
         <div className={s.post}>{text}</div>

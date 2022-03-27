@@ -27,7 +27,7 @@ const TweetPage = () => {
     <div>
       {isShowTweet ? (
         <div>
-          <TweetPageGlobal user={data[0].user} _id={data[0]._id} text={data[0].text} />
+          <TweetPageGlobal user={data[0].user} text={data[0].text} />
           <span>Comments, etc</span>
         </div>
       ) : isError ? (
