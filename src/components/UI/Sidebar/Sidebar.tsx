@@ -18,8 +18,8 @@ const Sidebar = () => {
 };
 
 const whoFollow = [
-  { name: "Duda", username: "duda", avatar: "img/avatar_2.jpeg" },
-  { name: "Bill Gates", username: "BillGates", avatar: "img/avatar_2.jpeg" },
+  { name: "Duda", username: "duda", avatar: "/img/avatar_2.jpeg" },
+  { name: "Bill Gates", username: "BillGates", avatar: "/img/avatar_2.jpeg" },
 ];
 
 const ActualTrends = () => {

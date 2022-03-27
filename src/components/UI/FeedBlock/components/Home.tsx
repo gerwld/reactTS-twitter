@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { fetchPosts } from "../../../../redux/actions/post";
+import { fetchPosts } from "../../../../redux/actions/posts";
 
 import MainPostTextarea from "../../MainPostTextarea/MainPostTextarea";
 import { TweetsMap } from "../FeedBlock";

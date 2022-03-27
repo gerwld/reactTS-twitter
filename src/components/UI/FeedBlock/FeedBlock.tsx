@@ -3,7 +3,7 @@ import React from "react";
 import Header from "../Header/Header";
 import Tweet from "../Tweet/Tweet";
 import Loader from "../Loader/Loader";
-import Home from "./contents/Home";
+import Home from "./components/Home";
 
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
@@ -13,6 +13,7 @@ import { fetchTopics } from "../../../redux/actions/sidebar";
 import { Routes } from "react-router-dom";
 import { Route } from "react-router-dom";
 import { Navigate } from 'react-router';
+import TweetPage from './components/TweetPage';
 
 const FeedBlock = () => {
   const dispatch = useDispatch();
@@ -25,6 +26,7 @@ const FeedBlock = () => {
       <Header />
       <Routes>
         <Route path="/home" element={<Home />} />
+        <Route path="/home/tweet/:id" element={<TweetPage/>}/>
         <Route path="/" element={<Navigate to="/home" />} />
       </Routes>
     </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import produce from "immer";
-import { PostActionsTypes } from "../actions/post";
+import { PostActionsTypes } from "../actions/posts";
 import { LoadingStatus } from "../types";
 
 const PostsState = {

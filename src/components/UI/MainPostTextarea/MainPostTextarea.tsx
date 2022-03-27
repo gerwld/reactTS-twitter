@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import SimpleForm from "../../../common/SimpleForm";
 import { RootState } from "../../../redux/reducers";
-import { onPostType } from "../../../redux/actions/post";
+import { onPostType } from "../../../redux/actions/posts";
 
 import { CircularProgress } from "@mui/material";
 import { IoImageOutline } from "react-icons/io5";

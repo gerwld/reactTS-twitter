@@ -45,7 +45,7 @@ const navbarLinks = [
     name: "profile",
     icon: "/img/assets/nav/7.svg",
     actIcon: "/img/assets/nav/active/7.svg",
-  }
+  },
 ];
 
 const Navbar = () => {
@@ -58,11 +58,10 @@ const Navbar = () => {
     <div className={s.navbar_wrapper}>
       <div className={s.navbar}>
         <div className={s.navbar_sect}>
-          <NavLink to="/home">
-            <div className={s.logo}>
-              <img src="img/logo.svg" alt="Logo" draggable={false} />
-            </div>
+          <NavLink to="/home" className={s.logo}>
+            <img src="/img/logo.svg" alt="Logo" draggable={false} />
           </NavLink>
+
           <nav className={s.main_nav}>
             <NavbarLinks links={navbarLinks} />
             <button onClick={onTweetPopup} className={s.btn_tweet}>
@@ -85,7 +84,9 @@ const NavbarLinks = ({ links }) => {
           <NavLink to={link.path}>
             {({ isActive }) => (
               <span className={s.link_content}>
-                <div className={s.icon}><img src={isActive ? link.actIcon : link.icon} alt={link.name} /></div>
+                <div className={s.icon}>
+                  <img src={isActive ? link.actIcon : link.icon} />
+                </div>
                 <span className={isActive ? s.active : ""}>{link.name}</span>
               </span>
             )}
@@ -93,8 +94,10 @@ const NavbarLinks = ({ links }) => {
         </li>
       ))}
       <li key={"more_button"}>
-      <span className={s.link_content}>
-          <div className={s.icon}><img src="/img/assets/nav/8.svg" alt="more" /></div>
+        <span className={s.link_content}>
+          <div className={s.icon}>
+            <img src="/img/assets/nav/8.svg" alt="more" />
+          </div>
           <span>More</span>
         </span>
       </li>

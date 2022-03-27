@@ -1,6 +1,6 @@
 import { call, put, takeEvery, takeLatest } from 'redux-saga/effects'
 import { PostsAPI } from '../../services/API/postsAPI';
-import { PostActionsTypes, setLoadingState, setPosts } from '../actions/post';
+import { PostActionsTypes, setLoadingState, setPosts } from '../actions/posts';
 import { AxiosResponse } from 'axios';
 import { LoadingStatus } from '../types';
 

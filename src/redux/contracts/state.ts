@@ -14,7 +14,7 @@ export interface Tweet {
   user: User;
 }
 
-export interface TweetsState {
+export interface PostsState {
   currentPostText: string
   maxLength: number;
   posts: any;
@@ -24,8 +24,13 @@ export interface TweetsState {
 export interface SidebarState {
   topics: any[],
   LoadingState: LoadingStatus;
-  
 }
+
+export interface TweetState {
+  data?: any[],
+  LoadingState: LoadingStatus
+}
+
 
 export interface User {
   _id?: string;
