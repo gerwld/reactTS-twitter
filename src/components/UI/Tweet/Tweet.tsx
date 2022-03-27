@@ -61,9 +61,7 @@ const Tweet = ({ user, _id, text }) => {
 export const TweetPageGlobal = ({ user, text }) => {
   useEffect(() => {
     changeTitle(`${user.fullname} on Twitter: "${text}"`);
-    return changeTitle;
-
-  });
+  }, []);
 
   return (
     <div className={s.tweet_pageblock}>

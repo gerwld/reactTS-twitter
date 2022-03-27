@@ -1,33 +1,43 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 
 import Header from "../Header/Header";
 import Tweet from "../Tweet/Tweet";
 import Loader from "../Loader/Loader";
 import Home from "./components/Home";
+import TweetPage from './components/TweetPage';
 
-import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
 import { selectTweetsPost, selectTweetsLoadingStatus } from "../../../redux/selectors";
 import { fetchTopics } from "../../../redux/actions/sidebar";
+import { allRouteTitles, getTitleByLocation } from "../../../routes/routeTitle";
 
-import { Routes } from "react-router-dom";
-import { Route } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { Navigate } from 'react-router';
-import TweetPage from './components/TweetPage';
+import { changeTitle } from '../../../services/title';
 
 const FeedBlock = () => {
   const dispatch = useDispatch();
+  const loc = useLocation().pathname;
+  const [title, setTitle] = useState('Twitter');
 
-  React.useEffect(() => {
+  useEffect(() => {
+    const title = getTitleByLocation(loc, allRouteTitles);
+    changeTitle(title + " / Twitter");
+    setTitle(title);
+  }, [loc])
+
+  useEffect(() => {
     dispatch(fetchTopics);
   }, []);
+
   return (
     <div className="feed_block">
-      <Header />
+      <Header title={title} />
       <Routes>
         <Route path="/home" element={<Home />} />
         <Route path="/home/tweet/:id" element={<TweetPage/>}/>
         <Route path="/" element={<Navigate to="/home" />} />
+        <Route path="/sign" element={<Navigate to="/home" />} />
       </Routes>
     </div>
   );
