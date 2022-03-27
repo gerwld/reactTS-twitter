@@ -3,6 +3,7 @@ export const allRouteTitles = {
   "/home/search": "Search",
   "/home": "Home",
   "/explore": "Explore",
+  "/notifications": "Notifications",
   "/messages": "Messages",
   "/bookmarks": "Bookmarks",
   "/lists": "Lists",

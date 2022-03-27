@@ -16,6 +16,8 @@
 --main-lightgray-color: #f7f8f9;
 --border-default: 1px solid rgb(238, 238, 238);
 
+--img-bg: #ececec;
+
 --hover-blue: #E2EEF6;
 --hover-darker: rgba(0, 0, 0, 0.03);
 
@@ -71,7 +73,6 @@ code {
   margin: 0 auto;
 }
 
-
 button {
   cursor: pointer;
   user-select: none;
@@ -87,6 +88,24 @@ button {
 
 .button_ct:active {
   transform: translateY(1px);
+}
+
+.image-block {
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 0;
+  
+  background-color: var(--img-bg);
+  overflow: hidden;
+}
+
+.image-block,
+.image-block img {
+  height: 50px;
+  object-fit: cover;
 }
 
 .sign-in {

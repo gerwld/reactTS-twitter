@@ -40,7 +40,7 @@ const MainPostTextarea = () => {
   return (
     <div className={s.textarea_block}>
       <div className={s.user_avatar}>
-        <img src="/avatar.jpeg" alt="Profile picture" className={s.avatar} />
+        <img src="/img/avatar.jpeg" alt="Profile picture" className={s.avatar} />
       </div>
       <div className={s.form}>
         <SimpleForm onSend={onTextareaSend} initialValue={{ post_content: currentText }}>

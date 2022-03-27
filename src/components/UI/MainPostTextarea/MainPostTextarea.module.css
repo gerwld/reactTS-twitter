@@ -11,11 +11,24 @@
   box-sizing: border-box;
 }
 
-.user_avatar img {
+.user_avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 48px;
+  background-color: var(--img-bg);
+}
+
+.user_avatar,
+.user_avatar img {
   height: 48px;
-  object-fit: contain;
+  font-size: 0;
   border-radius: var(--max-border-radius);
+  overflow: hidden;
+}
+
+.user_avatar img {
+  object-fit: contain;
 }
 
 .form {

@@ -68,11 +68,14 @@
   border-bottom: 1px solid #ececec;
 }
 
-.follow_block .avatar img {
+.follow_block .avatar {
   width: 48px;
   height: 48px;
-  object-fit: cover;
   border-radius: var(--max-border-radius);
+}
+
+.follow_block .avatar img {
+  height: 48px;
 }
 
 .follow_info {

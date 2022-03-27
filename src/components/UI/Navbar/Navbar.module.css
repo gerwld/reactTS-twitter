@@ -36,6 +36,7 @@
 .logo img {
   width: 30px;
   height: auto;
+  font-size: 0;
 }
 
 .main_nav {
@@ -52,20 +53,27 @@
   margin-bottom: 1.2vh;
 }
 
-.main_nav li svg {
+.icon {
   margin-right: 20px;
+}
 
+.icon,
+.icon img {
   width: 26px;
+  height: 26px;
+  overflow: hidden;
+  font-size: 0;
 }
 
 .main_nav li a {
   display: block;
   width: 100%;
   text-decoration: none;
+  text-transform: capitalize;
   color: var(--main-text-color);
 }
 
-.main_nav li span {
+.main_nav li .link_content {
   display: inline-flex;
   justify-content: flex-start;
   align-items: center;
@@ -76,7 +84,7 @@
   transition: background 0.1s ease-in-out 0.03s;
 }
 
-.active span {
+.active {
   font-weight: bold;
 }
 
@@ -84,7 +92,7 @@
   background-color: rgb(225, 236, 247);
 }
 
-.main_nav li:hover span {
+.main_nav li:hover .link_content {
   background-color: rgb(233, 233, 233);
 }
 

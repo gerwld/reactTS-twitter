@@ -3,7 +3,7 @@ import s from "./Sidebar.module.css";
 import SearchInput from "../SearchInput/SearchInput";
 import { useSelector } from "react-redux";
 import { selectSidebarTopics } from "../../../redux/selectors";
-import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Sidebar = () => {
   return (
@@ -18,8 +18,8 @@ const Sidebar = () => {
 };
 
 const whoFollow = [
-  { name: "Duda", username: "duda", avatar: "/avatar_2.jpeg" },
-  { name: "Bill Gates", username: "BillGates", avatar: "/avatar_2.jpeg" },
+  { name: "Duda", username: "duda", avatar: "img/avatar_2.jpeg" },
+  { name: "Bill Gates", username: "BillGates", avatar: "img/avatar_2.jpeg" },
 ];
 
 const ActualTrends = () => {
@@ -34,14 +34,18 @@ const ActualTrends = () => {
   );
 };
 
-const Trend: React.FC<TrendsProps> = ({ name, amount }) => {
+const Trend: React.FC<TrendsProps> = React.memo(({ name, amount }) => {
+  const navigate = useNavigate();
+  const onNavigateToTrend = () => {
+    navigate(`/home/search?q=${name}`);
+  }
   return (
-    <NavLink className={s.trend_block} to={`/home/search?q=${name}`}>
+    <div onClick={onNavigateToTrend} className={s.trend_block}>
         <span className={s.name}>{name}</span>
         <span className={s.amount}>{amount} Tweets</span>
-    </NavLink>
+    </div>
   );
-};
+});
 
 const WhoFollow = () => {
   return (
@@ -57,7 +61,7 @@ const WhoFollow = () => {
 const FollowBlock: React.FC<WhoFollowProps> = ({ name, username, avatar }) => {
   return (
     <div className={s.follow_block}>
-      <div className={s.avatar}>
+      <div className={s.avatar + ' image-block'}>
         <img src={avatar} alt={name + " user avatar"} />
       </div>
       <div className={s.follow_info}>
