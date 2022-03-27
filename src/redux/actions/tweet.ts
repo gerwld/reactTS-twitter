@@ -17,12 +17,17 @@ export interface FetchTweetDataActionInterface extends Action<TweetActions> {
   payload: string;
 }
 
+export interface GetTweetDataActionInterface extends Action<TweetActions> {
+  type: TweetActions.SET_TWEET_DATA;
+  payload: object | undefined;
+}
+
 export const fetchTweet = (payload): TweetAction => ({
   type: TweetActions.FETCH_TWEET_DATA,
   payload,
 });
 
-export const getTweet = (payload: object): TweetAction => ({
+export const getTweet = (payload): GetTweetDataActionInterface => ({
   type: TweetActions.SET_TWEET_DATA,
   payload,
 });

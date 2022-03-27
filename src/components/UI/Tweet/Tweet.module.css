@@ -145,6 +145,14 @@
   text-decoration: underline;
 }
 
+.username {
+  font-size: 15px;
+}
+
+.datetime {
+  font-size: 14px;
+}
+
 .username, 
 .datetime {
   text-decoration: none;
@@ -160,4 +168,40 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+}
+
+/* Pageblock */
+
+.tweet_pageblock {
+  padding: 10px 15px;
+}
+
+.pageblock_sect_1 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.tweet_pageblock .tweet_priminfo {
+  display: block;
+  flex: 1;
+  margin-left: 10px;
+}
+
+.tweet_pageblock .tweet_priminfo span {
+  display: block;
+}
+
+.tweet_pageblock .post {
+  font-size: 22px;
+  line-height: 120%;
+  margin: 15px 0;
+}
+
+.tweet_pageblock .buttons {
+  max-width: 100%;
+  margin: 15px auto 10px;
+  padding: 10px 10%;
+  border-top: var(--border-default);
+  border-bottom: var(--border-default);
 }
