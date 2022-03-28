@@ -5,7 +5,7 @@ export enum PostActionsTypes {
   FETCH_POSTS_DATA = "twitter-ts/post/FETCH_POSTS_DATA",
   SET_POSTS_DATA = "twitter-ts/post/SET_POSTS_DATA",
   SET_LOADING_STATE = "twitter-ts/post/SET_LOADING_STATE",
-  FETCH_ADD_POST = "twitter-ts/post/ADD_POST",
+  FETCH_ADD_POST = "twitter-ts/post/FETCH_ADD_POST",
   ADD_POST = "twitter-ts/post/ADD_POST",
 }
 
@@ -42,7 +42,7 @@ export const fetchAddPost = (payload: string): PostActions => ({
   payload
 })
 
-export const addPost = (payload: string): PostActions => ({
+export const addPost = (payload): PostActions => ({
   type: PostActionsTypes.ADD_POST,
   payload
 })

@@ -1,13 +1,16 @@
 import axios, { AxiosResponse } from "axios";
 
 export const PostsAPI = {
-  fetchPosts() {
-    return axios.get("/tweets").then(e => e.data);
+  async fetchPosts() {
+    const e = await axios.get("/tweets");
+    return e.data;
   },
-  fetchPost(id) {
-    return axios.get("tweets?_id=" + id).then(e => e.data);
+  async fetchPost(id) {
+    const e = await axios.get("tweets?_id=" + id);
+    return e.data;
   },
-  addPost(postObj: object):Promise<AxiosResponse> {
-    return axios.post("/tweets", postObj).then(e => e.data);
-  }
+  async addPost(postObj: object) {
+    const e = await axios.post("/tweets", postObj);
+    return e.data;
+  },
 }

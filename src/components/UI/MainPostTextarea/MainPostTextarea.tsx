@@ -6,11 +6,12 @@ import { useDispatch, useSelector } from "react-redux";
 
 import SimpleForm from "../../../common/SimpleForm";
 import { RootState } from "../../../redux/reducers";
-import { onPostType } from "../../../redux/actions/posts";
+import { fetchAddPost, onPostType } from "../../../redux/actions/posts";
 
 import { CircularProgress } from "@mui/material";
 import { IoImageOutline } from "react-icons/io5";
 import { AiOutlineSmile } from "react-icons/ai";
+
 
 const MainPostTextarea = () => {
   const dispatch = useDispatch();
@@ -22,8 +23,8 @@ const MainPostTextarea = () => {
   const length = currentText.length;
   const left = maxLength - currentText.length;
 
-  const onTextareaSend = (data: object) => {
-    console.log(data);
+  const onTextareaSend = (data) => {
+    dispatch(fetchAddPost(data.post_content));
   };
 
   const onTextAreaChange = (e: any, onChange: Function) => {

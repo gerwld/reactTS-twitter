@@ -6,29 +6,17 @@ import { LoadingStatus } from "../types";
 const PostsState = {
   currentPostText: "",
   maxLength: 300,
-  posts: undefined,
+  posts: [],
   LoadingStatus: LoadingStatus.NEVER,
 };
 
-const postReducer = (state = PostsState, action: any) => {
-  switch (action.type) {
-    case PostActionsTypes.ON_POST_TYPE:
-      return {
-        ...state,
-        currentPostText: action.payload,
-      };
-    default:
-      return state;
-  }
-};
-
-const postReducerOnImmer = produce((draft, action) => {
+const postReducer = produce((draft, action) => {
   switch (action.type) {
     case PostActionsTypes.ON_POST_TYPE:
       draft.currentPostText = action.payload;
       break;
     case PostActionsTypes.FETCH_POSTS_DATA:
-      draft.posts = undefined;
+      draft.posts = [];
       draft.LoadingStatus = LoadingStatus.LOADING;
       break;
     case PostActionsTypes.SET_POSTS_DATA:
@@ -38,9 +26,16 @@ const postReducerOnImmer = produce((draft, action) => {
     case PostActionsTypes.SET_LOADING_STATE:
       draft.LoadingStatus = action.payload;
       break;
+    case PostActionsTypes.FETCH_ADD_POST:
+      draft.LoadingStatus = LoadingStatus.LOADING;
+      break;
+    case PostActionsTypes.ADD_POST:
+      draft.posts.splice(0, 0, action.payload as never);
+      break;
+
     default:
       break;
   }
 }, PostsState);
 
-export default postReducerOnImmer;
+export default postReducer;

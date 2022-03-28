@@ -19,108 +19,88 @@
       }
     },
     {
-      "_id": "6240c037c476bab1ee967e57",
-      "text": "Velit et ea occaecat proident ad nostrud mollit irure nulla ipsum. Elit sunt sit esse adipisicing non ea nulla magna nostrud minim ullamco ex ut et. Laborum sunt velit eu ipsum magna. Eiusmod ullamco Lorem eiusmod magna est excepteur ea.",
+      "_id": "dtqj33vd9rj",
+      "id": "a61vu4iubd8",
+      "text": "виаваиаи",
       "user": {
-        "fullname": "Glenna White",
-        "username": "cardenas",
-        "avatarUrl": "https://source.unsplash.com/random/100x100?7"
+        "username": "Among_us",
+        "fullname": "Sus sus",
+        "avatarUrl": "https://source.unsplash.com/random/100x100?100"
       }
     },
     {
-      "_id": "6240c037fd20a92a6be72d85",
-      "text": "Tempor nisi laborum commodo culpa duis consectetur minim eu et nisi. Deserunt exercitation pariatur qui ex do consequat minim duis proident id. Occaecat veniam sunt sint ea elit adipisicing irure quis magna et adipisicing. Et id esse ad ea consequat reprehenderit fugiat eu laborum.",
+      "_id": "4b8qw02rdjl",
+      "id": "lw21ky98xwb",
+      "text": "ваиваваи",
       "user": {
-        "fullname": "Susie Porter",
-        "username": "carter",
-        "avatarUrl": "https://source.unsplash.com/random/100x100?4"
+        "username": "Among_us",
+        "fullname": "Sus sus",
+        "avatarUrl": "https://source.unsplash.com/random/100x100?100"
       }
     },
     {
-      "_id": "6240c037bc3fd951ff284671",
-      "text": "Labore laborum laboris cillum et esse sint sit enim elit pariatur nisi. Eiusmod aliquip nostrud deserunt aliquip deserunt sunt mollit magna sit. Magna ea veniam esse irure ex. Voluptate magna sit cillum pariatur aliquip ea voluptate eiusmod dolor in qui incididunt amet duis.",
+      "_id": "j6zl1qcvpap",
+      "id": "rq0f96m017",
+      "text": "ваиваи",
       "user": {
-        "fullname": "Stokes Sherman",
-        "username": "sharpe",
-        "avatarUrl": "https://source.unsplash.com/random/100x100?2"
+        "username": "Among_us",
+        "fullname": "Sus sus",
+        "avatarUrl": "https://source.unsplash.com/random/100x100?100"
       }
     },
     {
-      "_id": "6240c03713322dcdd7f63037",
-      "text": "Dolore enim enim ea quis aliqua nostrud laboris cillum. Aliquip dolor dolore incididunt aliqua exercitation magna consequat labore quis fugiat qui exercitation. Dolor nostrud consequat velit in magna id magna Lorem. Fugiat commodo mollit duis cillum esse exercitation laborum velit commodo fugiat reprehenderit.",
+      "_id": "omnyxp43wjh",
+      "id": "ykroafljur",
+      "text": "ваиваи",
       "user": {
-        "fullname": "Washington Stewart",
-        "username": "richards",
-        "avatarUrl": "https://source.unsplash.com/random/100x100?4"
-      }
-    },
-    {
-      "_id": "6240c03778f651157461ccba",
-      "text": "Laboris enim in culpa magna qui Lorem fugiat id Lorem occaecat consequat consectetur. Sit veniam nisi in exercitation dolore mollit fugiat. Cillum voluptate labore ea ad anim cillum cillum anim. Nostrud do est occaecat qui non fugiat veniam labore velit consectetur quis adipisicing id.",
-      "user": {
-        "fullname": "Willie Shepherd",
-        "username": "reynolds",
-        "avatarUrl": "https://source.unsplash.com/random/100x100?5"
-      }
-    },
-    {
-      "_id": "6240c03711874cef3e55fc22",
-      "text": "Minim exercitation sint elit irure. Deserunt nostrud nulla do irure exercitation ullamco aliquip proident eiusmod proident ex irure fugiat. Et exercitation elit incididunt dolor est. Elit ad minim dolore do ex voluptate est et ut.",
-      "user": {
-        "fullname": "Dalton Bush",
-        "username": "munoz",
-        "avatarUrl": "https://source.unsplash.com/random/100x100?3"
-      }
-    },
-    {
-      "_id": "6240c037d6a2d67c46580fbc",
-      "text": "Laborum fugiat est reprehenderit est ut nostrud excepteur magna esse consequat. Elit nostrud reprehenderit enim labore laboris in dolore aliqua reprehenderit. Commodo ipsum ut adipisicing consequat. Culpa excepteur incididunt sit aliquip.",
-      "user": {
-        "fullname": "Collins Salas",
-        "username": "dalton",
-        "avatarUrl": "https://source.unsplash.com/random/100x100?7"
-      }
-    },
-    {
-      "_id": "6240c0376aa1ba54b5f086b8",
-      "text": "Incididunt commodo culpa reprehenderit et dolor eiusmod non laboris incididunt. Incididunt consequat labore deserunt nulla id quis fugiat ad ex est sint minim. Reprehenderit do non id occaecat reprehenderit consectetur sit id elit eiusmod consectetur adipisicing. Amet eu nulla ut consequat ipsum officia amet.",
-      "user": {
-        "fullname": "Sharlene Fischer",
-        "username": "goodman",
-        "avatarUrl": "https://source.unsplash.com/random/100x100?2"
+        "username": "Among_us",
+        "fullname": "Sus sus",
+        "avatarUrl": "https://source.unsplash.com/random/100x100?100"
       }
     }
   ],
-    "topics": [
-      {"name": "Беларусь", "amount": 202354},
-      {"name": "Duda", "amount": 435},
-      {"name": "#StandWithUkraine", "amount": 23522},
-      {"name": "Szwedzi", "amount": 65778}
-    ],
-    "users": [
-      {
-        "_id": "101",
-        "fullname": "Consuelo Wong",
-        "username": "poole",
-        "avatarUrl": "https://source.unsplash.com/random/100x100?"
-      },
-      {
-        "_id": "102",
-        "fullname": "Consuelo Bong",
-        "username": "poole",
-        "avatarUrl": "https://source.unsplash.com/random/100x100?"
-      },
-      {
-        "_id": "103",
-        "fullname": "Consuelo Dong",
-        "username": "poole",
-        "avatarUrl": "https://source.unsplash.com/random/100x100?"
-      }
-    ],
-    "user": {
-      "_id": "100000001",
-      "fullname": "P Jaworski",
-      "username": "p_jaworski63",
-      "avatarUrl": "/avatar.jpeg"
+  "topics": [
+    {
+      "name": "Беларусь",
+      "amount": 202354
+    },
+    {
+      "name": "Duda",
+      "amount": 435
+    },
+    {
+      "name": "#StandWithUkraine",
+      "amount": 23522
+    },
+    {
+      "name": "Szwedzi",
+      "amount": 65778
     }
+  ],
+  "users": [
+    {
+      "_id": "101",
+      "fullname": "Consuelo Wong",
+      "username": "poole",
+      "avatarUrl": "https://source.unsplash.com/random/100x100?"
+    },
+    {
+      "_id": "102",
+      "fullname": "Consuelo Bong",
+      "username": "poole",
+      "avatarUrl": "https://source.unsplash.com/random/100x100?"
+    },
+    {
+      "_id": "103",
+      "fullname": "Consuelo Dong",
+      "username": "poole",
+      "avatarUrl": "https://source.unsplash.com/random/100x100?"
+    }
+  ],
+  "user": {
+    "_id": "100000001",
+    "fullname": "P Jaworski",
+    "username": "p_jaworski63",
+    "avatarUrl": "/avatar.jpeg"
   }
+}
