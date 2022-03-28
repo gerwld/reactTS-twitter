@@ -1,4 +1,4 @@
-import { LoadingStatus } from "../types";
+import { LoadingStatus, PendingStatus } from "../types";
 
 export enum AddFormState {
   LOADING = 'LOADING',
@@ -19,6 +19,7 @@ export interface PostsState {
   maxLength: number;
   posts: any;
   LoadingStatus: LoadingStatus;
+  PostPendingStatus: PendingStatus;
 }
 
 export interface SidebarState {

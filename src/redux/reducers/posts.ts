@@ -1,13 +1,14 @@
 import React from "react";
 import produce from "immer";
 import { PostActionsTypes } from "../actions/posts";
-import { LoadingStatus } from "../types";
+import { LoadingStatus, PendingStatus } from "../types";
 
 const PostsState = {
   currentPostText: "",
   maxLength: 300,
   posts: [],
   LoadingStatus: LoadingStatus.NEVER,
+  PostPendingStatus: PendingStatus.NEVER
 };
 
 const postReducer = produce((draft, action) => {
@@ -27,10 +28,12 @@ const postReducer = produce((draft, action) => {
       draft.LoadingStatus = action.payload;
       break;
     case PostActionsTypes.FETCH_ADD_POST:
-      draft.LoadingStatus = LoadingStatus.LOADING;
+      draft.PostPendingStatus = PendingStatus.PENDING;
       break;
     case PostActionsTypes.ADD_POST:
       draft.posts.splice(0, 0, action.payload as never);
+      draft.currentPostText = "";
+      draft.PostPendingStatus = PendingStatus.SUCCESS;
       break;
 
     default:
