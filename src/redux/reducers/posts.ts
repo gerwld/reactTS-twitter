@@ -8,7 +8,7 @@ const PostsState = {
   maxLength: 300,
   posts: [],
   LoadingStatus: LoadingStatus.NEVER,
-  PostPendingStatus: PendingStatus.NEVER
+  PostPendingStatus: PendingStatus.NEVER,
 };
 
 const postReducer = produce((draft, action) => {
@@ -34,6 +34,9 @@ const postReducer = produce((draft, action) => {
       draft.posts.splice(0, 0, action.payload as never);
       draft.currentPostText = "";
       draft.PostPendingStatus = PendingStatus.SUCCESS;
+      break;
+    case PostActionsTypes.SET_POST_PENDING_STATE:
+      draft.PostPendingStatus = action.payload;
       break;
 
     default:

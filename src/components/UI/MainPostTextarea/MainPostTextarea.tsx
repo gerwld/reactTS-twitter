@@ -11,12 +11,13 @@ import { fetchAddPost, onPostType } from "../../../redux/actions/posts";
 import { CircularProgress } from "@mui/material";
 import { IoImageOutline } from "react-icons/io5";
 import { AiOutlineSmile } from "react-icons/ai";
-import { selectTweetPendingStatus } from "../../../redux/selectors";
+import { selectTweetPendingErrorStatus, selectTweetPendingStatus } from "../../../redux/selectors";
 
 
 const MainPostTextarea = () => {
   const dispatch = useDispatch();
   const isPending = useSelector(selectTweetPendingStatus) as boolean;
+  const isError = useSelector(selectTweetPendingErrorStatus) as boolean;
   const { maxLength, currentText } = useSelector(({ post }: RootState) => ({
     maxLength: post.maxLength,
     currentText: post.currentPostText,
@@ -85,10 +86,11 @@ const MainPostTextarea = () => {
               className={s.btn_send + " button_ct"}
               type="submit"
               disabled={length > maxLength || length < 1 || isPending}>
-              {isPending ? "Pending..." : "Tweet"}
+              {isPending && !isError ? "Pending..." : "Tweet"}
             </button>
           </div>
         </SimpleForm>
+        {isError && <span>Error</span>}
       </div>
     </div>
   );

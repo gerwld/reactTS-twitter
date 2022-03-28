@@ -2,8 +2,9 @@ import { AxiosResponse } from "axios";
 import { put, call, takeEvery } from "redux-saga/effects";
 
 import { LoadingStatus } from "../types";
-import { FetchTweetDataActionInterface, getTweet, setLoadingState, TweetActions } from "../actions/tweet";
+import {  getTweet, setLoadingState, TweetActions } from "../actions/tweet";
 import { PostsAPI } from '../../services/API/postsAPI';
+import { FetchTweetDataActionInterface } from "../actions/interfaces/tweetInterfaces";
 
 
 export function* fetchTweetRequest({payload: tweetId}: FetchTweetDataActionInterface) {

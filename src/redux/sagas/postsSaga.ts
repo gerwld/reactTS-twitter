@@ -1,8 +1,9 @@
 import { call, put, takeLatest } from 'redux-saga/effects'
 import { PostsAPI } from '../../services/API/postsAPI';
-import { PostActionsTypes, setLoadingState, setPosts, PostActionInterface, addPost } from '../actions/posts';
+import { PostActionsTypes, setLoadingState, setPosts, addPost, setPostPendingState } from '../actions/posts';
 import { AxiosResponse } from 'axios';
-import { LoadingStatus } from '../types';
+import { LoadingStatus, PendingStatus } from '../types';
+import { PostActionInterface } from '../actions/interfaces/postInterfaces';
 
 export function* fetchPostsRequest() {
   try {
@@ -25,11 +26,11 @@ export function* addPostRequest({ payload }: PostActionInterface) {
         avatarUrl: "https://source.unsplash.com/random/100x100?100",
       },
     };
-    const resp = yield call(PostsAPI.addPost, item);
-
+    const resp: Promise<AxiosResponse> = yield call(PostsAPI.addPost, item);
     yield put(addPost(resp));
+
   } catch (error) {
-    yield put(setLoadingState(LoadingStatus.ERROR));
+    yield put(setPostPendingState(PendingStatus.ERROR));
   }
 }
 

@@ -15,3 +15,4 @@ export const selectTweetsLoadingStatus = (state: RootState): Boolean => selectTw
 export const selectTweetLoadingStatus = (state: RootState): Boolean => selectTweet(state).LoadingState === LoadingStatus.LOADING;
 export const selectTweetErrorStatus = (state: RootState): Boolean => selectTweet(state).LoadingState === LoadingStatus.ERROR;
 export const selectTweetPendingStatus = (state: RootState): Boolean => selectTweets(state).PostPendingStatus === PendingStatus.PENDING;
+export const selectTweetPendingErrorStatus = (state: RootState): Boolean => selectTweets(state).PostPendingStatus === PendingStatus.ERROR;
