@@ -17,14 +17,7 @@ import { changeTitle } from '../../../services/title';
 
 const FeedBlock = () => {
   const dispatch = useDispatch();
-  const loc = useLocation().pathname;
   const [title, setTitle] = useState('Twitter');
-
-  useEffect(() => {
-    const title = getTitleByLocation(loc, allRouteTitles);
-    changeTitle(title + " / Twitter");
-    setTitle(title);
-  }, [loc])
 
   useEffect(() => {
     dispatch(fetchTopics);
@@ -39,6 +32,7 @@ const FeedBlock = () => {
         <Route path="/" element={<Navigate to="/home" />} />
         <Route path="/sign" element={<Navigate to="/home" />} />
       </Routes>
+      <ChangeTitle setTitle={setTitle} />
     </div>
   );
 };
@@ -50,5 +44,18 @@ export const TweetsMap = () => {
   if (tweets) return tweets.map((tweet: any) => <Tweet key={tweet._id} {...tweet} />);
   return "Error";
 };
+
+//For prevent whole re-render (useLocation causing it)
+export const ChangeTitle = ({setTitle}) => {
+  const loc = useLocation().pathname;
+
+  useEffect(() => {
+    const title = getTitleByLocation(loc, allRouteTitles);
+    changeTitle(title + " / Twitter");
+    setTitle(title);
+  }, [loc])
+
+  return <></>
+}
 
 export default FeedBlock;

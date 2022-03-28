@@ -6,5 +6,8 @@ export const PostsAPI = {
   },
   fetchPost(id) {
     return axios.get("tweets?_id=" + id).then(e => e.data);
+  },
+  addPost(postObj: object):Promise<AxiosResponse> {
+    return axios.post("/tweets", postObj).then(e => e.data);
   }
 }
