@@ -61,7 +61,7 @@
 }
 
 /* buttons */
-.buttons .btn,
+.buttons button,
 .btn_opt {
   height: 35px;
   width: 35px;
@@ -108,7 +108,7 @@
 }
 
 /* hovers */
-.buttons .btn:hover {
+.buttons button:hover {
   color: var(--text-primary-blue);
   background-color: var(--hover-blue);
 }

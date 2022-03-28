@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import s from "./Tweet.module.css";
 import { NavLink } from "react-router-dom";
 import { AiOutlineRetweet, AiOutlineHeart, AiOutlineLineChart } from "react-icons/ai";
 import { FiMessageCircle, FiShare } from "react-icons/fi";
-import { changeTitle } from '../../../services/title';
+import { changeTitle } from "../../../services/title";
 
 const Tweet = ({ user, _id, text }) => {
   return (
@@ -22,33 +22,30 @@ const Tweet = ({ user, _id, text }) => {
               <span className={s.datetime}>Oct 4, 2020</span>
             </div>
             <button className={`${s.btn} ${s.btn_opt}`}>
-            <svg
-              viewBox="0 0 24 24"
-              aria-hidden="true"
-              className="svg">
-              <g>
-                <circle cx="5" cy="12" r="2"></circle>
-                <circle cx="12" cy="12" r="2"></circle>
-                <circle cx="19" cy="12" r="2"></circle>
-              </g>
-            </svg>
-          </button>
+              <svg viewBox="0 0 24 24" aria-hidden="true" className="svg">
+                <g>
+                  <circle cx="5" cy="12" r="2"></circle>
+                  <circle cx="12" cy="12" r="2"></circle>
+                  <circle cx="19" cy="12" r="2"></circle>
+                </g>
+              </svg>
+            </button>
           </div>
           <div className={s.post}>{text}</div>
           <div className={s.buttons}>
-            <button className={`${s.btn} ${s.btn_reply}`}>
+            <button className={s.btn_reply}>
               <FiMessageCircle />
             </button>
-            <button className={`${s.btn} ${s.btn_rt}`}>
+            <button className={s.btn_rt}>
               <AiOutlineRetweet />
             </button>
-            <button className={`${s.btn} ${s.btn_like}`}>
+            <button className={s.btn_like}>
               <AiOutlineHeart />
             </button>
-            <button className={`${s.btn} ${s.btn_share}`}>
+            <button className={s.btn_share}>
               <FiShare />
             </button>
-            <button className={`${s.btn} ${s.btn_analytics}`}>
+            <button className={s.btn_analytics}>
               <AiOutlineLineChart />
             </button>
           </div>
@@ -59,7 +56,7 @@ const Tweet = ({ user, _id, text }) => {
 };
 
 export const TweetPageGlobal = ({ user, text }) => {
-  useEffect(() => {
+  React.useEffect(() => {
     changeTitle(`${user.fullname} on Twitter: "${text}"`);
   }, []);
 
@@ -88,19 +85,19 @@ export const TweetPageGlobal = ({ user, text }) => {
         <div className={s.post}>{text}</div>
         <span className={s.datetime}>9:56PM Oct 4, 2020</span>
         <div className={s.buttons}>
-          <button className={`${s.btn} ${s.btn_reply}`}>
+          <button className={s.btn_reply}>
             <FiMessageCircle />
           </button>
-          <button className={`${s.btn} ${s.btn_rt}`}>
+          <button className={s.btn_rt}>
             <AiOutlineRetweet />
           </button>
-          <button className={`${s.btn} ${s.btn_like}`}>
+          <button className={s.btn_like}>
             <AiOutlineHeart />
           </button>
-          <button className={`${s.btn} ${s.btn_share}`}>
+          <button className={s.btn_share}>
             <FiShare />
           </button>
-          <button className={`${s.btn} ${s.btn_analytics}`}>
+          <button className={s.btn_analytics}>
             <AiOutlineLineChart />
           </button>
         </div>
