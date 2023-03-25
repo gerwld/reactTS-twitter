@@ -11,3 +11,8 @@ Build:
 ```
 $ pnpm build
 ```
+
+Run local json-server:
+```
+$ pnpm json-server
+```
