@@ -1,9 +1,9 @@
 import React from "react";
-import s from "./Tweet.module.css";
+import s from "./s.module.css";
 import { NavLink } from "react-router-dom";
 import { AiOutlineRetweet, AiOutlineHeart, AiOutlineLineChart } from "react-icons/ai";
 import { FiMessageCircle, FiShare } from "react-icons/fi";
-import { changeTitle } from "../../../services/title";
+import { changeTitle } from "services/title";
 
 const Tweet = ({ user, _id, text }) => {
   return (

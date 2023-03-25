@@ -1,13 +1,12 @@
 import { Navigate } from "react-router-dom";
-import SignIn from "../components/pages/SignIn";
+import {SignInPage, MainPage} from "components";
 import { createBrowserRouter } from "react-router-dom";
-import MainPage from "../components/pages/MainPage";
 
 // React router dom v.6
 export const publicRoutes = createBrowserRouter([
  { path: "*", element: <Navigate to="/sign" /> },
- { path: "/sign", element: <SignIn /> },
- { path: "/", element: <SignIn /> },
+ { path: "/sign", element: <SignInPage /> },
+ { path: "/", element: <SignInPage /> },
 ]);
 
 export const privateRoutes = createBrowserRouter([

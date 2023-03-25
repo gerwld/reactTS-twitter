@@ -1,20 +1,21 @@
 import React from "react";
-import s from "./MainPostTextarea.module.css";
+import s from "./s.module.css";
 import { Field } from "react-final-form";
 import TextareaAutosize from "react-textarea-autosize";
 import { useDispatch, useSelector } from "react-redux";
 
-import SimpleForm from "../../../common/SimpleForm";
-import { RootState } from "../../../redux/reducers";
-import { fetchAddPost, onPostType } from "../../../redux/actions/posts";
+import { SimpleForm } from "components";
+import { RootState } from "store/reducers";
+import { fetchAddPost, onPostType } from "store/actions/posts";
+import { selectTweetPendingErrorStatus, selectTweetPendingStatus } from "store/selectors";
 
 import { CircularProgress } from "@mui/material";
 import { IoImageOutline } from "react-icons/io5";
 import { AiOutlineSmile } from "react-icons/ai";
-import { selectTweetPendingErrorStatus, selectTweetPendingStatus } from "../../../redux/selectors";
 
 
-const MainPostTextarea = () => {
+
+const PostInput = () => {
   const dispatch = useDispatch();
   const isPending = useSelector(selectTweetPendingStatus) as boolean;
   const isError = useSelector(selectTweetPendingErrorStatus) as boolean;
@@ -96,4 +97,4 @@ const MainPostTextarea = () => {
   );
 };
 
-export default MainPostTextarea;
+export default PostInput;

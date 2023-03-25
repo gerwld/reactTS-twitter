@@ -1,9 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import Navbar from "../UI/Navbar/Navbar";
-import Sidebar from "../UI/Sidebar/Sidebar";
-import FeedBlock from '../UI/FeedBlock/FeedBlock';
-
+import {FeedBlock, Navbar, Sidebar} from "components";
 
 const MainPage = () => {
   const [isAuth, setIsAuth] = useState(true);

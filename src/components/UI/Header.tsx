@@ -1,5 +1,4 @@
 import React from "react";
-import s from "./Header.module.css";
 import { BsArrowLeftShort } from "react-icons/bs";
 import { useNavigate } from 'react-router-dom';
 
@@ -13,11 +12,11 @@ const Header: React.FC<HeaderProps> = ({ children, title }) => {
   }
 
   return (
-    <div className={s.header}>
+    <div className="header">
       {isBtnBack && 
-      <button onClick={onGoBack} className={s.back_btn}><BsArrowLeftShort/></button>}
+      <button onClick={onGoBack} className="back_btn"><BsArrowLeftShort/></button>}
       {children ? {children} : <span>{title}</span>}
-      <div className={s.bg}></div>
+      <div className="bg"></div>
     </div>
   );
 };

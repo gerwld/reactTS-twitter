@@ -1,9 +1,8 @@
 import React, { useState, FC } from "react";
-import { ModalWindow } from "../../common/ModalWindow/ModalWindow";
 import { Field } from "react-final-form";
-import SimpleForm from '../../common/SimpleForm';
+import { ModalWindow, SimpleForm} from "components";
 
-const SignIn: React.FC  = ():React.ReactElement => {
+const SignInPage: React.FC  = ():React.ReactElement => {
   const [showSignModal, changeSignModal] = useState(false);
   const [showSignUpModal, changeSignUpModal] = useState(false);
 
@@ -98,4 +97,4 @@ interface SignUpFormProps {
   setVisible: Function
 }
 
-export default SignIn;
+export default SignInPage;

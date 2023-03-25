@@ -1,19 +1,12 @@
 import React, { useState, useEffect } from "react";
-
-import Header from "../Header/Header";
-import Tweet from "../Tweet/Tweet";
-import Loader from "../Loader/Loader";
-import Home from "./components/Home";
-import TweetPage from "./components/TweetPage";
-
-import { selectTweetsPost, selectTweetsLoadingStatus } from "../../../redux/selectors";
-import { fetchTopics } from "../../../redux/actions/sidebar";
-import { allRouteTitles, getTitleByLocation } from "../../../routes/routeTitle";
-
 import { useSelector, useDispatch } from "react-redux";
-import { Routes, Route, useLocation } from "react-router-dom";
-import { Navigate } from "react-router-dom";
-import { changeTitle } from "../../../services/title";
+import { Routes, Route, useLocation, Navigate } from "react-router-dom";
+import { Header, Tweet, Loader, Home, TweetPage } from "components";
+
+import { selectTweetsPost, selectTweetsLoadingStatus } from "../../store/selectors";
+import { fetchTopics } from "../../store/actions/sidebar";
+import { allRouteTitles, getTitleByLocation } from "../../routes/routeTitle";
+import { changeTitle } from "../../services/title";
 
 const FeedBlock = () => {
  const dispatch = useDispatch();

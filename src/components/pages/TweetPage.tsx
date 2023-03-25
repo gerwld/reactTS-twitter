@@ -3,10 +3,9 @@ import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 
-import { selectTweetData, selectTweetErrorStatus, selectTweetLoadingStatus } from "../../../../redux/selectors";
-import { fetchTweet, getTweet } from "../../../../redux/actions/tweet";
-import Loader from "../../Loader/Loader";
-import { TweetPageGlobal } from "../../Tweet/Tweet";
+import { selectTweetData, selectTweetErrorStatus, selectTweetLoadingStatus } from "store/selectors";
+import { fetchTweet, getTweet } from "store/actions/tweet";
+import { Tweet, Loader } from "components";
 
 const TweetPage = () => {
   const dispatch = useDispatch();
@@ -27,7 +26,7 @@ const TweetPage = () => {
     <div>
       {isShowTweet ? (
         <div>
-          <TweetPageGlobal user={data[0].user} text={data[0].text} />
+          <Tweet _id="123" user={data[0].user} text={data[0].text} />
           <span>Comments, etc</span>
         </div>
       ) : isError ? (

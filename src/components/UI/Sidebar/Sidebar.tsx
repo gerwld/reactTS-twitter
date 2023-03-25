@@ -1,8 +1,8 @@
 import React from "react";
-import s from "./Sidebar.module.css";
-import SearchInput from "../SearchInput/SearchInput";
+import s from "./s.module.css";
+import {SearchInput} from "components";
 import { useSelector } from "react-redux";
-import { selectSidebarTopics } from "../../../redux/selectors";
+import { selectSidebarTopics } from "store/selectors";
 import { useNavigate } from "react-router-dom";
 
 const Sidebar = () => {

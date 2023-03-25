@@ -21,9 +21,9 @@ export function* addPostRequest({ payload }: PostActionInterface) {
       id: Math.random().toString(36).substring(2),
       text: payload,
       user: {
-        username: "Among_us",
-        fullname: "Sus sus",
-        avatarUrl: "https://source.unsplash.com/random/100x100?100",
+        username: "gerwld",
+        fullname: "Gerwld",
+        avatarUrl: "/img/avatar.jpeg",
       },
     };
     const resp: Promise<AxiosResponse> = yield call(PostsAPI.addPost, item);
