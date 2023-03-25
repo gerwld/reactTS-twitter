@@ -1,7 +1,8 @@
-import axios, { AxiosResponse } from "axios";
+import { AxiosResponse } from "axios";
+import { instance } from "./instance";
 
 export const sidebarApi = {
-  fetchTopics():Promise<AxiosResponse> {
-    return axios.get("/topics").then(e => e.data);
-  },
+ fetchTopics(): Promise<AxiosResponse> {
+  return instance.get("/topics").then((e) => e.data);
+ },
 };

@@ -1,16 +1,17 @@
-import axios, { AxiosResponse } from "axios";
+import { instance } from "./instance";
+
 
 export const PostsAPI = {
   async fetchPosts() {
-    const e = await axios.get("/tweets");
+    const e = await instance.get("/tweets");
     return e.data;
   },
   async fetchPost(id) {
-    const e = await axios.get("tweets?_id=" + id);
+    const e = await instance.get("tweets?_id=" + id);
     return e.data;
   },
   async addPost(postObj: object) {
-    const e = await axios.post("/tweets", postObj);
+    const e = await instance.post("/tweets", postObj);
     return e.data;
   },
 }
